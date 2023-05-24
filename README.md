@@ -43,3 +43,31 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
 ## Personal notion documentation
 
 [Link to project](https://www.notion.so/eduuardoperez/ChatGPT-Prompt-Engineering-for-Developers-e475df6e091548c48b46e62dd26601ee?pvs=4)
+
+## Setup
+
+Steps:
+
+1. Create the virtual env
+
+    ```shell
+    python3 -m venv .venv && source .venv/bin/activate
+    ```
+
+2. Install dependencies
+
+    ```shell
+    pip install -r requirements.txt
+    ```
+
+3. Create the `.env` file and fill it with your [OpenAI API key](https://platform.openai.com/account/api-keys)
+
+    ```shell
+    cp .env.example .env
+    ```
+
+4. Run the script
+
+    ```shell
+    python3 main.py
+    ```
