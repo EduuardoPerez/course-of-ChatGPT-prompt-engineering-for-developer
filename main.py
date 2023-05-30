@@ -48,7 +48,25 @@ Summarize the text delimited by triple backticks \
 into a single sentence.
 ```{text_1}```
 """
-response = get_completion(prompt_1)
-print(response)
-# response: Clear and specific instructions should be provided to guide a model towards the desired output, and longer
+response_1 = get_completion(prompt_1)
+print(response_1)
+# response
+# Clear and specific instructions should be provided to guide a model towards the desired output, and longer
 # prompts can provide more clarity and context for the model, leading to more detailed and relevant outputs.
+
+
+# ** Tactic 2: Ask for a structured output
+prompt_2 = """
+Generate a list of three made-up book titles along \
+with their authors and genres.
+Provide them in JSON format with the following keys:
+book_id, title, author, genre.
+"""
+response_2 = get_completion(prompt_2)
+print(response_2)
+# response
+# [
+#     {"book_id": 1, "title": "The Lost City of Zorath", "author": "Aria Blackwood", "genre": "Fantasy"},
+#     {"book_id": 2, "title": "The Last Survivors", "author": "Ethan Stone", "genre": "Science Fiction"},
+#     {"book_id": 3, "title": "The Secret of the Haunted Mansion", "author": "Lila Rose", "genre": "Mystery"},
+# ]
