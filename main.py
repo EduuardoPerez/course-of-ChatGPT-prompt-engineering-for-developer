@@ -126,9 +126,9 @@ games or simply relaxing on the grass. It's a \
 perfect day to spend time outdoors and appreciate the \
 beauty of nature.
 """
-response = get_completion(prompt_3.format(text_3))
+response_4 = get_completion(prompt_3.format(text_3))
 print("Completion for Text 2:")
-print(response)
+print(response_4)
 # response
 # Completion for Text 2:
 # No steps provided.
@@ -145,8 +145,8 @@ the most intricate tapestry begins with a solitary thread.
 
 <child>: Teach me about resilience.
 """
-response_4 = get_completion(prompt_4)
-print(response_4)
+response_5 = get_completion(prompt_4)
+print(response_5)
 # response
 # <grandparent>: Resilience is like a tree that bends with the wind but never breaks. It is the ability to bounce back
 # from adversity and keep moving forward, even when things get tough. Just like a tree that grows stronger with each
@@ -184,9 +184,9 @@ Separate your answers with line breaks.
 Text:
 ```{text_4}```
 """
-response = get_completion(prompt_5)
+response_6 = get_completion(prompt_5)
 print("Completion for prompt 5:")
-print(response)
+print(response_6)
 # response
 # Completion for prompt 5:
 # Two siblings, Jack and Jill, go on a quest to fetch water from a well on a hilltop, but misfortune strikes and they
@@ -222,9 +222,9 @@ Output JSON: <json with summary and num_names>
 
 Text: <{text_4}>
 """
-response = get_completion(prompt_6)
+response_7 = get_completion(prompt_6)
 print("\nCompletion for prompt 6:")
-print(response)
+print(response_7)
 # response
 # Completion for prompt 6:
 # Summary: Jack and Jill go on a quest to fetch water, but misfortune strikes and they tumble down the hill, \
@@ -238,3 +238,109 @@ print(response)
 #         rentrant chez eux légèrement meurtris mais avec leurs esprits aventureux intacts.",
 #     "num_names": 2,
 # }
+
+
+# ** Tactic 2: Instruct the model to work out its own solution before rushing to a conclusion
+# This prompt (prompt_7) isn't making the model to workout the solution, but it's to look at the result and compare
+# The next prompt (prompt_8) makes the model to workout the solution
+prompt_7 = """
+Determine if the student's solution is correct or not.
+
+Question:
+I'm building a solar power installation and I need \
+    help working out the financials.
+- Land costs $100 / square foot
+- I can buy solar panels for $250 / square foot
+- I negotiated a contract for maintenance that will cost \
+me a flat $100k per year, and an additional $10 / square \
+foot
+What is the total cost for the first year of operations
+as a function of the number of square feet.
+
+Student's Solution:
+Let x be the size of the installation in square feet.
+Costs:
+1. Land cost: 100x
+2. Solar panel cost: 250x
+3. Maintenance cost: 100,000 + 100x
+Total cost: 100x + 250x + 100,000 + 100x = 450x + 100,000
+"""
+response_8 = get_completion(prompt_7)
+print(response_8)
+# response
+# The student's solution is correct.
+
+# This prompt (prompt_8) makes the model to workout the solution
+prompt_8 = """
+Your task is to determine if the student's solution \
+is correct or not.
+To solve the problem do the following:
+- First, work out your own solution to the problem.
+- Then compare your solution to the student's solution \
+and evaluate if the student's solution is correct or not.
+Don't decide if the student's solution is correct until
+you have done the problem yourself.
+
+Use the following format:
+Question:
+```
+question here
+```
+Student's solution:
+```
+student's solution here
+```
+Actual solution:
+```
+steps to work out the solution and your solution here
+```
+Is the student's solution the same as actual solution \
+just calculated:
+```
+yes or no
+```
+Student grade:
+```
+correct or incorrect
+```
+
+Question:
+```
+I'm building a solar power installation and I need help \
+working out the financials.
+- Land costs $100 / square foot
+- I can buy solar panels for $250 / square foot
+- I negotiated a contract for maintenance that will cost \
+me a flat $100k per year, and an additional $10 / square \
+foot
+What is the total cost for the first year of operations \
+as a function of the number of square feet.
+```
+Student's solution:
+```
+Let x be the size of the installation in square feet.
+Costs:
+1. Land cost: 100x
+2. Solar panel cost: 250x
+3. Maintenance cost: 100,000 + 100x
+Total cost: 100x + 250x + 100,000 + 100x = 450x + 100,000
+```
+Actual solution:
+"""
+response_9 = get_completion(prompt_8)
+print(response_9)
+# response
+# Let x be the size of the installation in square feet.
+
+# Costs:
+# 1. Land cost: 100x
+# 2. Solar panel cost: 250x
+# 3. Maintenance cost: 100,000 + 10x
+
+# Total cost: 100x + 250x + 100,000 + 10x = 360x + 100,000
+
+# Is the student's solution the same as actual solution just calculated:
+# No
+
+# Student grade:
+# Incorrect
