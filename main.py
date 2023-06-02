@@ -344,3 +344,38 @@ print(response_9)
 
 # Student grade:
 # Incorrect
+
+
+# ** Model Limitations: Hallucinations
+# ** ---------------------------------
+
+
+prompt_9 = """
+Tell me about AeroGlide UltraSlim Smart Toothbrush by Boie
+"""
+# Boie is a real company, the product name is not real
+response_10 = get_completion(prompt_9)
+print(response_10)
+# The AeroGlide UltraSlim Smart Toothbrush by Boie is a high-tech toothbrush that uses advanced sonic technology to
+# provide a deep and thorough clean. It features a slim and sleek design that makes it easy to hold and maneuver, and
+# it comes with a range of smart features that help you optimize your brushing routine.
+#
+# One of the key features of the AeroGlide UltraSlim Smart Toothbrush is its advanced sonic technology, which uses
+# high-frequency vibrations to break up plaque and bacteria on your teeth and gums. This technology is highly effective
+# at removing even the toughest stains and buildup, leaving your teeth feeling clean and refreshed.
+#
+# In addition to its sonic technology, the AeroGlide UltraSlim Smart Toothbrush also comes with a range of smart
+# features that help you optimize your brushing routine. These include a built-in timer that ensures you brush for the
+# recommended two minutes, as well as a pressure sensor that alerts you if you're brushing too hard.
+#
+# Overall, the AeroGlide UltraSlim Smart Toothbrush by Boie is a highly advanced and effective toothbrush that is
+# perfect for anyone looking to take their oral hygiene to the next level. With its advanced sonic technology and smart
+# features, it provides a deep and thorough clean that leaves your teeth feeling fresh and healthy.
+
+
+# ** Additional tactic to reduce hallucinations
+# ** First find relevant information, then answer the question based on the relevant information.
+# To reduce hallucinations, in the case that you want the model to kind of generate answers based on a text, is to ask
+# the model to first find any relevant quotes from the text and then ask it to use those quotes to kind of answer
+# questions. And kind of having a way to trace the answer back to the source document is often pretty helpful to kind
+# of reduce these hallucinations.

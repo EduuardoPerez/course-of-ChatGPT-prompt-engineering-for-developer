@@ -42,10 +42,12 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
 
 ## Personal notion documentation
 
+---
 [Link to project](https://www.notion.so/eduuardoperez/ChatGPT-Prompt-Engineering-for-Developers-e475df6e091548c48b46e62dd26601ee?pvs=4)
 
 ## Setup
 
+---
 Steps:
 
 1. Create the virtual env
