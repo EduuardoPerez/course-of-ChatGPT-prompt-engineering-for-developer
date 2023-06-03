@@ -40,6 +40,22 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
   - [LinkedIn](https://www.linkedin.com/in/andrewyng/)
   - [Twitter](https://twitter.com/AndrewYNg)
 
+## Table of Contents
+
+- [Course of ChatGPT prompt engineering for developer](#course-of-chatgpt-prompt-engineering-for-developer)
+  - [Table of Contents](#table-of-contents)
+  - [Personal notion documentation](#personal-notion-documentation)
+  - [Setup](#setup)
+  - [Classes](#classes)
+    - [Class 01: Introduction](#class-01-introduction)
+    - [Class 02: Guidelines](#class-02-guidelines)
+      - [Prompting Principles](#prompting-principles)
+      - [Principle 1. Tactic 1: Use delimiters to clearly indicate distinct parts of the input](#principle-1-tactic-1-use-delimiters-to-clearly-indicate-distinct-parts-of-the-input)
+        - [**Example Prompt**](#example-prompt)
+          - [**Example template**](#example-template)
+          - [**Full example**](#full-example)
+          - [**Model response**](#model-response)
+
 ## Personal notion documentation
 
 ---
@@ -73,3 +89,61 @@ Steps:
     ```shell
     python3 main.py
     ```
+
+## Classes
+
+---
+
+### Class 01: Introduction
+
+This course on ChatGPT Prompt Engineering for Developers covers best practices and use cases for utilizing large language models (LLMs) through API calls. It distinguishes between base LLMs, trained to predict the next word, and instruction-tuned LLMs, trained to follow instructions. Instruction-tuned LLMs have gained momentum due to their helpful and less harmful outputs. The course emphasizes using instruction-tuned LLMs and provides examples of clear instructions and giving the LLM time to generate accurate responses. The materials were developed with contributions from OpenAI and DeepLearning.ai teams.
+
+![Types of large language models (LLMs)](classes/src/class01-LLMs-types.png)
+
+### Class 02: Guidelines
+
+This class provides guidelines for effective prompting, focusing on two key principles: writing clear and specific instructions and giving the model time to think. Clear instructions help guide the model towards the desired output, while allowing it time to reason reduces the likelihood of incorrect responses. Tactics for clear instructions include using delimiters to indicate distinct parts of the input, asking for structured output like HTML or JSON, checking conditions before task completion, and utilizing few-shot prompting with examples. To give the model time to think, specifying steps for complex tasks, instructing the model to reason out its own solution before rushing to a conclusion, and comparing its solution to a given one can yield better results.
+
+#### Prompting Principles
+
+- **Principle 1: Write clear and specific instructions**\
+  The first principle emphasizes the importance of providing clear and specific instructions to guide the model towards the desired output, highlighting that longer prompts can often offer more clarity and context for generating detailed and relevant responses.
+- **Principle 2: Give the model time to "think"**\
+  The second principle advises giving the model sufficient time to think and reason, as rushing it may lead to incorrect conclusions, suggesting that complex tasks require more computational effort and encouraging reframing queries to prompt a chain of relevant reasoning before providing a final answer.
+
+#### Principle 1. Tactic 1: Use delimiters to clearly indicate distinct parts of the input
+
+![Principle 1. Tactic 1](classes/src/class02-principle1-tactic1.png)
+
+- Delimiters can be anything like:
+  - """
+  - \```
+  - \---
+  - < >
+  - \<tag> </tag>
+
+Delimiters serve as clear punctuation to separate specific sections of text from the rest of the prompt, helping to prevent prompt injections where conflicting user instructions may lead the model astray, and in the example below, the use of delimiters ensures that the model focuses on summarizing the designated instructions rather than following them.
+
+![Principle 1. Tactic 1. Avoid prompt injections](class/../classes/src/class02-principle1-tactic1-avoid-prompt-injection.png)
+
+##### **Example Prompt**
+
+###### **Example template**
+
+```plain
+Summarize the text delimited by triple backticks into a single sentence.
+```text```
+```
+
+###### **Full example**
+
+```plain
+Summarize the text delimited by triple backticks into a single sentence.
+```You should express what you want a model to do by providing instructions that are as clear and specific as you can possibly make them. This will guide the model towards the desired output, and reduce the chances of receiving irrelevant or incorrect responses. Don't confuse writing a clear prompt with writing a short prompt. In many cases, longer prompts provide more clarity and context for the model, which can lead to more detailed and relevant outputs.```
+```
+
+###### **Model response**
+
+```plain
+Clear and specific instructions should be provided to guide a model towards the desired output, and longer prompts can provide more clarity and context for the model, leading to more detailed and relevant outputs.
+```
