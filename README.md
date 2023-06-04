@@ -51,10 +51,15 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
     - [Class 02: Guidelines](#class-02-guidelines)
       - [Prompting Principles](#prompting-principles)
       - [Principle 1. Tactic 1: Use delimiters to clearly indicate distinct parts of the input](#principle-1-tactic-1-use-delimiters-to-clearly-indicate-distinct-parts-of-the-input)
-        - [**Example Prompt**](#example-prompt)
-          - [**Example template**](#example-template)
-          - [**Full example**](#full-example)
-          - [**Model response**](#model-response)
+        - [**Example Prompt. Principle 1. Tactic 1.**](#example-prompt-principle-1-tactic-1)
+          - [**Example template. Principle 1. Tactic 1.**](#example-template-principle-1-tactic-1)
+          - [**Full example. Principle 1. Tactic 1.**](#full-example-principle-1-tactic-1)
+          - [**Model response. Principle 1. Tactic 1.**](#model-response-principle-1-tactic-1)
+      - [Principle 1. Tactic 2: Ask for a structured output](#principle-1-tactic-2-ask-for-a-structured-output)
+        - [**Example Prompt. Principle 1. Tactic 2.**](#example-prompt-principle-1-tactic-2)
+          - [**Example template. Principle 1. Tactic 2.**](#example-template-principle-1-tactic-2)
+          - [**Full example. Principle 1. Tactic 2.**](#full-example-principle-1-tactic-2)
+          - [**Model response. Principle 1. Tactic 2.**](#model-response-principle-1-tactic-2)
 
 ## Personal notion documentation
 
@@ -126,24 +131,72 @@ Delimiters serve as clear punctuation to separate specific sections of text from
 
 ![Principle 1. Tactic 1. Avoid prompt injections](class/../classes/src/class02-principle1-tactic1-avoid-prompt-injection.png)
 
-##### **Example Prompt**
+##### **Example Prompt. Principle 1. Tactic 1.**
 
-###### **Example template**
+###### **Example template. Principle 1. Tactic 1.**
 
 ```plain
 Summarize the text delimited by triple backticks into a single sentence.
 ```text```
 ```
 
-###### **Full example**
+###### **Full example. Principle 1. Tactic 1.**
 
 ```plain
 Summarize the text delimited by triple backticks into a single sentence.
 ```You should express what you want a model to do by providing instructions that are as clear and specific as you can possibly make them. This will guide the model towards the desired output, and reduce the chances of receiving irrelevant or incorrect responses. Don't confuse writing a clear prompt with writing a short prompt. In many cases, longer prompts provide more clarity and context for the model, which can lead to more detailed and relevant outputs.```
 ```
 
-###### **Model response**
+###### **Model response. Principle 1. Tactic 1.**
 
 ```plain
 Clear and specific instructions should be provided to guide a model towards the desired output, and longer prompts can provide more clarity and context for the model, leading to more detailed and relevant outputs.
+```
+
+#### Principle 1. Tactic 2: Ask for a structured output
+
+![Principle 2. Tactic 2](classes/src/class02-principel1-tactic2.png)
+
+To facilitate parsing model outputs, asking for a structured output like HTML or JSON can be useful. For example, requesting a list of three fictional book titles along with their authors and genres in JSON format allows easy conversion into a dictionary or list in Python.
+
+##### **Example Prompt. Principle 1. Tactic 2.**
+
+###### **Example template. Principle 1. Tactic 2.**
+
+```plain
+Generate a list of {some requirement}.
+Provide them in JSON format with the following keys:
+{relevant keys}.
+```
+
+###### **Full example. Principle 1. Tactic 2.**
+
+```plain
+Generate a list of three made-up book titles along with their authors and genres.
+Provide them in JSON format with the following keys: book_id, title, author, genre.
+```
+
+###### **Model response. Principle 1. Tactic 2.**
+
+```json
+[
+  {
+    "book_id": 1,
+    "title": "The Lost City of Zorath",
+    "author": "Aria Blackwood",
+    "genre": "Fantasy"
+  },
+  {
+    "book_id": 2,
+    "title": "The Last Survivors",
+    "author": "Ethan Stone",
+    "genre": "Science Fiction"
+  },
+  {
+    "book_id": 3,
+    "title": "The Secret of the Haunted Mansion",
+    "author": "Lila Rose",
+    "genre": "Mystery"
+  }
+]
 ```
