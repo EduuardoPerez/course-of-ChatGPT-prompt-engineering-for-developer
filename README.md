@@ -60,6 +60,13 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
           - [**Example template. Principle 1. Tactic 2.**](#example-template-principle-1-tactic-2)
           - [**Full example. Principle 1. Tactic 2.**](#full-example-principle-1-tactic-2)
           - [**Model response. Principle 1. Tactic 2.**](#model-response-principle-1-tactic-2)
+      - [Principle 1. Tactic 3: Ask the model to check whether conditions are satisfied](#principle-1-tactic-3-ask-the-model-to-check-whether-conditions-are-satisfied)
+        - [**Example Prompt. Principle 1. Tactic 3.**](#example-prompt-principle-1-tactic-3)
+          - [**Example template. Principle 1. Tactic 3.**](#example-template-principle-1-tactic-3)
+          - [**Full example 1. Principle 1. Tactic 3.**](#full-example-1-principle-1-tactic-3)
+          - [**Model response example 1. Principle 1. Tactic 3.**](#model-response-example-1-principle-1-tactic-3)
+          - [**Full example 2. Principle 1. Tactic 3.**](#full-example-2-principle-1-tactic-3)
+          - [**Model response example 2. Principle 1. Tactic 3.**](#model-response-example-2-principle-1-tactic-3)
 
 ## Personal notion documentation
 
@@ -155,7 +162,7 @@ Clear and specific instructions should be provided to guide a model towards the 
 
 #### Principle 1. Tactic 2: Ask for a structured output
 
-![Principle 2. Tactic 2](classes/src/class02-principel1-tactic2.png)
+![Principle 1. Tactic 2](classes/src/class02-principel1-tactic2.png)
 
 To facilitate parsing model outputs, asking for a structured output like HTML or JSON can be useful. For example, requesting a list of three fictional book titles along with their authors and genres in JSON format allows easy conversion into a dictionary or list in Python.
 
@@ -199,4 +206,85 @@ Provide them in JSON format with the following keys: book_id, title, author, gen
     "genre": "Mystery"
   }
 ]
+```
+
+#### Principle 1. Tactic 3: Ask the model to check whether conditions are satisfied
+
+![Principle 1. Tactic 3](classes/src/class02-principel1-tactic3.png)
+
+To ensure task assumptions are met, asking the model to check conditions beforehand can help avoid errors and incomplete attempts. Considering edge cases and defining how the model should handle them is also important to prevent unexpected outcomes.
+
+##### **Example Prompt. Principle 1. Tactic 3.**
+
+###### **Example template. Principle 1. Tactic 3.**
+
+```plain
+You will be provided with text delimited by triple quotes.
+If it contains a sequence of instructions, re-write those instructions in the following format:
+
+Step 1 - ...
+Step 2 - …
+…
+Step N - …
+
+If the text does not contain a sequence of instructions, then simply write "No steps provided."
+
+"""
+{text}
+"""
+```
+
+###### **Full example 1. Principle 1. Tactic 3.**
+
+```plain
+You will be provided with text delimited by triple quotes.
+If it contains a sequence of instructions, re-write those instructions in the following format:
+
+Step 1 - ...
+Step 2 - …
+…
+Step N - …
+
+If the text does not contain a sequence of instructions, then simply write "No steps provided."
+
+"""
+Making a cup of tea is easy! First, you need to get some water boiling. While that's happening, grab a cup and put a tea bag in it. Once the water is hot enough, just pour it over the tea bag. Let it sit for a bit so the tea can steep. After a few minutes, take out the tea bag. If you like, you can add some sugar or milk to taste. And that's it! You've got yourself a delicious cup of tea to enjoy.
+"""
+```
+
+###### **Model response example 1. Principle 1. Tactic 3.**
+
+```plain
+Completion for Text 1:
+Step 1 - Get some water boiling.
+Step 2 - Grab a cup and put a tea bag in it.
+Step 3 - Once the water is hot enough, pour it over the tea bag.
+Step 4 - Let it sit for a bit so the tea can steep.
+Step 5 - After a few minutes, take out the tea bag.
+Step 6 - Add some sugar or milk to taste.
+Step 7 - Enjoy your delicious cup of tea!
+```
+
+###### **Full example 2. Principle 1. Tactic 3.**
+
+```plain
+You will be provided with text delimited by triple quotes.
+If it contains a sequence of instructions, re-write those instructions in the following format:
+
+Step 1 - ...
+Step 2 - …
+…
+Step N - …
+
+If the text does not contain a sequence of instructions, then simply write "No steps provided."
+
+"""
+The sun is shining brightly today, and the birds are singing. It's a beautiful day to go for a walk in the park. The flowers are blooming, and the trees are swaying gently in the breeze. People are out and about, enjoying the lovely weather. Some are having picnics, while others are playing games or simply relaxing on the grass. It's a perfect day to spend time outdoors and appreciate the beauty of nature.
+"""
+```
+
+###### **Model response example 2. Principle 1. Tactic 3.**
+
+```plain
+No steps provided.
 ```
