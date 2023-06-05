@@ -50,6 +50,8 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
     - [Class 01: Introduction](#class-01-introduction)
     - [Class 02: Guidelines](#class-02-guidelines)
       - [Prompting Principles](#prompting-principles)
+        - [**Principle 1: Write clear and specific instructions**](#principle-1-write-clear-and-specific-instructions)
+        - [**Principle 2: Give the model time to "think"**](#principle-2-give-the-model-time-to-think)
       - [Principle 1. Tactic 1: Use delimiters to clearly indicate distinct parts of the input](#principle-1-tactic-1-use-delimiters-to-clearly-indicate-distinct-parts-of-the-input)
         - [**Example Prompt. Principle 1. Tactic 1.**](#example-prompt-principle-1-tactic-1)
           - [**Example template. Principle 1. Tactic 1.**](#example-template-principle-1-tactic-1)
@@ -71,6 +73,13 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
         - [**Example Prompt. Principle 1. Tactic 4.**](#example-prompt-principle-1-tactic-4)
           - [**Example. Principle 1. Tactic 4.**](#example-principle-1-tactic-4)
           - [**Model response. Principle 1. Tactic 4.**](#model-response-principle-1-tactic-4)
+      - [Principle 2. Tactic 1: Specify the steps required to complete a task](#principle-2-tactic-1-specify-the-steps-required-to-complete-a-task)
+        - [**Example Prompt. Principle 2. Tactic 1.**](#example-prompt-principle-2-tactic-1)
+          - [**Example template. Principle 2. Tactic 1.**](#example-template-principle-2-tactic-1)
+          - [**Full example 1. Principle 2. Tactic 1.**](#full-example-1-principle-2-tactic-1)
+          - [**Model response example 1. Principle 2. Tactic 1.**](#model-response-example-1-principle-2-tactic-1)
+          - [**Full example 2. Principle 2. Tactic 1. Ask for output in a specified format**](#full-example-2-principle-2-tactic-1-ask-for-output-in-a-specified-format)
+          - [**Model response example 2. Principle 2. Tactic 1.**](#model-response-example-2-principle-2-tactic-1)
 
 ## Personal notion documentation
 
@@ -122,9 +131,12 @@ This class provides guidelines for effective prompting, focusing on two key prin
 
 #### Prompting Principles
 
-- **Principle 1: Write clear and specific instructions**\
+##### **Principle 1: Write clear and specific instructions**
+
   The first principle emphasizes the importance of providing clear and specific instructions to guide the model towards the desired output, highlighting that longer prompts can often offer more clarity and context for generating detailed and relevant responses.
-- **Principle 2: Give the model time to "think"**\
+
+##### **Principle 2: Give the model time to "think"**
+
   The second principle advises giving the model sufficient time to think and reason, as rushing it may lead to incorrect conclusions, suggesting that complex tasks require more computational effort and encouraging reframing queries to prompt a chain of relevant reasoning before providing a final answer.
 
 #### Principle 1. Tactic 1: Use delimiters to clearly indicate distinct parts of the input
@@ -316,4 +328,94 @@ Your task is to answer in a consistent style.
 
 ```plain
 <grandparent>: Resilience is like a tree that bends with the wind but never breaks. It is the ability to bounce back from adversity and keep moving forward, even when things get tough. Just like a tree that grows stronger with each storm it weathers, resilience is a quality that can be developed and strengthened over time.
+```
+
+#### Principle 2. Tactic 1: Specify the steps required to complete a task
+
+![Principle 2. Tactic 1](classes/src/class02-principle2-tactic1.png)
+
+The first tactic of the second principle, is to provide specific instructions for a task, such as summarizing a text, translating it into French, listing names, and outputting a JSON object with specific keys, while separating the answers with line breaks.
+
+##### **Example Prompt. Principle 2. Tactic 1.**
+
+###### **Example template. Principle 2. Tactic 1.**
+
+```plain
+Perform the following actions:
+Step 1: ...
+Step 2: ...
+...
+Step N: ...
+
+Separate your answers with line breaks.
+
+Text:
+```{text}```
+```
+
+###### **Full example 1. Principle 2. Tactic 1.**
+
+```plain
+Perform the following actions:
+1 - Summarize the following text delimited by triple backticks with 1 sentence.
+2 - Translate the summary into French.
+3 - List each name in the French summary.
+4 - Output a json object that contains the following keys: french_summary, num_names.
+
+Separate your answers with line breaks.
+
+Text:
+```In a charming village, siblings Jack and Jill set out on a quest to fetch water from a hilltop well. As they climbed, singing joyfully, misfortune struck—Jack tripped on a stone and tumbled down the hill, with Jill following suit. Though slightly battered, the pair returned home to comforting embraces. Despite the mishap, their adventurous spirits remained undimmed, and they continued exploring with delight.```
+```
+
+###### **Model response example 1. Principle 2. Tactic 1.**
+
+```plain
+Two siblings, Jack and Jill, go on a quest to fetch water from a well on a hilltop, but misfortune strikes and they both tumble down the hill, returning home slightly battered but with their adventurous spirits undimmed.
+
+Deux frères et sœurs, Jack et Jill, partent en quête d'eau d'un puits sur une colline, mais un malheur frappe et ils tombent tous les deux de la colline, rentrant chez eux légèrement meurtris mais avec leurs esprits aventureux intacts. Noms: Jack, Jill.
+
+{
+  "french_summary": "Deux frères et sœurs, Jack et Jill, partent en quête d'eau d'un puits sur une colline, mais un malheur frappe et ils tombent tous les deux de la colline, rentrant chez eux légèrement meurtris mais avec leurs esprits aventureux intacts.",
+  "num_names": 2,
+}
+```
+
+###### **Full example 2. Principle 2. Tactic 1. Ask for output in a specified format**
+
+```plain
+Your task is to perform the following actions:
+1 - Summarize the following text delimited by <> with 1 sentence.
+2 - Translate the summary into French.
+3 - List each name in the French summary.
+4 - Output a json object that contains the following keys: french_summary, num_names.
+
+Use the following format:
+Text: <text to summarize>
+
+Summary: <summary>
+
+Translation: <summary translation>
+
+Names: <list of names in Italian summary>
+
+Output JSON: <json with summary and num_names>
+
+Text: <In a charming village, siblings Jack and Jill set out on a quest to fetch water from a hilltop well. As they climbed, singing joyfully, misfortune struck—Jack tripped on a stone and tumbled down the hill, with Jill following suit. Though slightly battered, the pair returned home to comforting embraces. Despite the mishap, their adventurous spirits remained undimmed, and they continued exploring with delight.>
+```
+
+###### **Model response example 2. Principle 2. Tactic 1.**
+
+```plain
+Summary: Jack and Jill, siblings from a charming village, embarked on a quest to fetch water but encountered misfortune along the way. Despite the mishap, their adventurous spirits persisted.
+
+Translation: Jack et Jill, frère et sœur d'un charmant village, se sont lancés dans une quête pour chercher de l'eau mais ont rencontré des malheurs en cours de route. Malgré cet incident, leur esprit d'aventure persistait.
+
+Names: Jack, Jill
+
+Output JSON:
+{
+"french_summary": "Jack et Jill, frère et sœur d'un charmant village, se sont lancés dans une quête pour chercher de l'eau mais ont rencontré des malheurs en cours de route. Malgré cet incident, leur esprit d'aventure persistait.",
+"num_names": 2
+}
 ```
