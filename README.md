@@ -69,7 +69,7 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
           - [**Model response example 1. Principle 1. Tactic 3.**](#model-response-example-1-principle-1-tactic-3)
           - [**Full example 2. Principle 1. Tactic 3.**](#full-example-2-principle-1-tactic-3)
           - [**Model response example 2. Principle 1. Tactic 3.**](#model-response-example-2-principle-1-tactic-3)
-      - [Principle 1. Tactic 4: Ask for a structured output](#principle-1-tactic-4-ask-for-a-structured-output)
+      - [Principle 1. Tactic 4: "Few-shot" prompting](#principle-1-tactic-4-few-shot-prompting)
         - [**Example Prompt. Principle 1. Tactic 4.**](#example-prompt-principle-1-tactic-4)
           - [**Example. Principle 1. Tactic 4.**](#example-principle-1-tactic-4)
           - [**Model response. Principle 1. Tactic 4.**](#model-response-principle-1-tactic-4)
@@ -308,13 +308,15 @@ The sun is shining brightly today, and the birds are singing. It's a beautiful d
 No steps provided.
 ```
 
-#### Principle 1. Tactic 4: Ask for a structured output
+#### Principle 1. Tactic 4: "Few-shot" prompting
 
 ![Principle 1. Tactic 4](classes/src/class02-principel1-tactic4.png)
 
 The final tactic for this principle is using few-shot prompting, which involves providing examples of successful task executions before asking the model to perform the desired task.
 
 ##### **Example Prompt. Principle 1. Tactic 4.**
+
+The prompt instructs the model to answer in a consistent style by providing examples of a conversation between a child and a grandparent. The model is asked to teach about patience and then about resilience, and it responds in a similar tone, using metaphors to convey the desired message.
 
 ###### **Example. Principle 1. Tactic 4.**
 
