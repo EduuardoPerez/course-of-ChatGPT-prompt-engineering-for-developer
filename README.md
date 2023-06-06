@@ -80,6 +80,9 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
           - [**Model response example 1. Principle 2. Tactic 1.**](#model-response-example-1-principle-2-tactic-1)
           - [**Full example 2. Principle 2. Tactic 1. Ask for output in a specified format**](#full-example-2-principle-2-tactic-1-ask-for-output-in-a-specified-format)
           - [**Model response example 2. Principle 2. Tactic 1.**](#model-response-example-2-principle-2-tactic-1)
+      - [Principle 2. Tactic 2: Instruct the model to work out its own solution before rushing to a conclusion](#principle-2-tactic-2-instruct-the-model-to-work-out-its-own-solution-before-rushing-to-a-conclusion)
+        - [**Example Prompt. Principle 2. Tactic 2.**](#example-prompt-principle-2-tactic-2)
+          - [**Model response. Principle 2. Tactic 2.**](#model-response-principle-2-tactic-2)
 
 ## Personal notion documentation
 
@@ -418,4 +421,108 @@ Output JSON:
 "french_summary": "Jack et Jill, frère et sœur d'un charmant village, se sont lancés dans une quête pour chercher de l'eau mais ont rencontré des malheurs en cours de route. Malgré cet incident, leur esprit d'aventure persistait.",
 "num_names": 2
 }
+```
+
+#### Principle 2. Tactic 2: Instruct the model to work out its own solution before rushing to a conclusion
+
+![Principle 2. Tactic 2](classes/src/class02-principel1-tactic2.png)
+
+Instructing the model to reason and work out its own solution before reaching a conclusion can lead to better results, similar to giving the model time to think and allowing it to mimic human judgment in evaluating the correctness of a student's solution.
+
+##### **Example Prompt. Principle 2. Tactic 2.**
+
+The prompt instructs the model to determine if the student's solution is correct by first working out its own solution to the problem, comparing it to the student's solution, and evaluating their correctness. The format includes the question, student's solution, actual solution, agreement status (yes or no), and the student's grade (correct or incorrect). By breaking down the task and giving the model more time to think, it can provide accurate evaluations and assessments.
+
+```plain
+Your task is to determine if the student's solution is correct or not.
+
+To solve the problem do the following:
+- First, work out your own solution to the problem.
+- Then compare your solution to the student's solution and evaluate if the student's solution is correct or not. Don't decide if the student's solution is correct until you have done the problem yourself.
+
+Use the following format:
+
+Question:
+"""
+question here
+"""
+Student's solution:
+"""
+student's solution here
+"""
+Actual solution:
+"""
+steps to work out the solution and your solution here
+"""
+Is the student's solution the same as actual solution just calculated:
+"""
+yes or no
+"""
+Student grade:
+"""
+correct or incorrect
+"""
+
+Question:
+"""
+I'm building a solar power installation and I need help working out the financials.
+- Land costs $100 / square foot
+- I can buy solar panels for $250 / square foot
+- I negotiated a contract for maintenance that will cost me a flat $100k per year, and an additional $10 / square foot
+What is the total cost for the first year of operations as a function of the number of square feet.
+"""
+
+Student's solution:
+"""
+Let x be the size of the installation in square feet.
+Costs:
+1. Land cost: 100x
+2. Solar panel cost: 250x
+3. Maintenance cost: 100,000 + 100x
+Total cost: 100x + 250x + 100,000 + 100x = 450x + 100,000
+"""
+
+Actual solution:
+```
+
+###### **Model response. Principle 2. Tactic 2.**
+
+```plain
+Question:
+"""
+I'm building a solar power installation and I need help working out the financials.
+
+Land costs $100 / square foot
+I can buy solar panels for $250 / square foot
+I negotiated a contract for maintenance that will cost me a flat $100k per year, and an additional $10 / square foot
+What is the total cost for the first year of operations as a function of the number of square feet?
+"""
+Student's solution:
+"""
+Let x be the size of the installation in square feet.
+Costs:
+
+Land cost: 100x
+Solar panel cost: 250x
+Maintenance cost: 100,000 + 100x
+Total cost: 100x + 250x + 100,000 + 100x = 450x + 100,000
+"""
+Actual solution:
+"""
+To calculate the total cost for the first year of operations, we need to add up the costs for land, solar panels, and maintenance.
+
+Land cost: $100 * x square feet
+Solar panel cost: $250 * x square feet
+Maintenance cost: $100,000 (flat fee) + $10 * x square feet
+Total cost: 100x + 250x + 100,000 + 10x = 360x + 100,000
+"""
+Is the student's solution the same as the actual solution just calculated?
+"""
+No
+"""
+
+Student grade:
+"""
+Incorrect
+"""
 ```
