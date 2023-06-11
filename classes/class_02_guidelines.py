@@ -2,7 +2,7 @@ from main import get_completion
 
 
 def execute():
-    print("Welcome to the Guidelines class\n")
+    print("Welcome to class 02: Guidelines")
     print("-------------------------------")
 
     # ** Principle 1: Write clear and specific instructions
