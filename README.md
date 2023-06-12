@@ -85,6 +85,11 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
           - [**Model response. Principle 2. Tactic 2.**](#model-response-principle-2-tactic-2)
       - [Model Limitations: Hallucinations](#model-limitations-hallucinations)
         - [Example of an Hallucination of the LLM](#example-of-an-hallucination-of-the-llm)
+    - [Class 03: Iterative](#class-03-iterative)
+      - [Iterative Prompt Development](#iterative-prompt-development)
+        - [Prompt guidelines](#prompt-guidelines)
+          - [Expanding the prompt guidelines](#expanding-the-prompt-guidelines)
+        - [Example summarizing a fact sheet for a chair for a marketing team](#example-summarizing-a-fact-sheet-for-a-chair-for-a-marketing-team)
 
 ## Personal notion documentation
 
@@ -535,7 +540,7 @@ Incorrect
 
 ![Model Limitations: Hallucinations](classes/src/class02-model-limitations-hallucinations.png)
 
-To mitigate the issue of model limitations and prevent the generation of fabricated ideas or "hallucinations," it is important to consider the model's knowledge boundaries when developing applications with large language models. One approach to reduce hallucinations is to ask the model to provide answers based on relevant quotes from a text source, ensuring that the generated answers can be traced back to their original context.
+To mitigate the issue of model limitations and prevent the generation of fabricated ideas or "hallucinations," it is important to consider the model's knowledge boundaries when developing applications with large language models (LLMs). One approach to reduce hallucinations is to ask the model to provide answers based on relevant quotes from a text source, ensuring that the generated answers can be traced back to their original context.
 
 ##### Example of an Hallucination of the LLM
 
@@ -562,3 +567,74 @@ Overall, the AeroGlide UltraSlim Smart Toothbrush by Boie is a highly advanced a
 ```
 
 The model is giving us a pretty realistic sounding description of a fictitious product. This can be potentially misleading, highlighting the importance of employing techniques discussed until now to mitigate such risks.
+
+### Class 03: Iterative
+
+The process of building applications with large language models (LLMs) involves iterative improvement of prompts to find what works best for the intended task, as the initial prompt rarely yields optimal results. The key is to focus on refining the prompt through an effective process rather than relying on the first attempt, as the ultimate goal is to find prompts that are well-suited for the application at hand.
+
+#### Iterative Prompt Development
+
+![Iterative Prompt Development](classes/src/class03-iterative-prompt-development.png)
+
+When developing prompts for applications using a LLM, it's beneficial to follow an iterative process. Similar to the development of machine learning models, you start with an idea, implement it by writing the code and obtaining data, train the model, and analyze the experimental results. Through this analysis, you can identify areas of improvement, adjust your approach or problem statement, modify the implementation, and run further experiments. The process continues iteratively until you achieve an effective prompt that works well for your specific application. The focus should be on refining the prompt based on the feedback received rather than seeking a single "perfect" prompt. Having a well-defined process for developing suitable prompts is key for successful application development with large language models (LLMs).
+
+##### Prompt guidelines
+
+- Be clear and specific
+- Analyze why result does not give desired output.
+- Refine the idea and the prompt
+- Repeat
+
+###### Expanding the prompt guidelines
+
+- Prompt development for large language models (LLMS) is an iterative process.
+- The initial prompt can be refined based on the desired length or specific characteristics of the output.
+- Modifying the prompt allows for control over the output and tailoring it to the intended audience.
+- Including additional instructions in the prompt can yield more specific results, such as generating tables or formatting output.
+- The process of prompt development involves testing different variations and refining the prompt based on the desired outcomes.
+- Evaluating prompts against a larger set of examples can be useful for mature applications to assess performance and drive prompt improvement.
+
+##### Example summarizing a fact sheet for a chair for a marketing team
+
+Text to summarize
+
+```plain
+  OVERVIEW
+  - Part of a beautiful family of mid-century inspired office furniture,
+  including filing cabinets, desks, bookcases, meeting tables, and more.
+  - Several options of shell color and base finishes.
+  - Available with plastic back and front upholstery (SWC-100)
+  or full upholstery (SWC-110) in 10 fabric and 6 leather options.
+  - Base finish options are: stainless steel, matte black,
+  gloss white, or chrome.
+  - Chair is available with or without armrests.
+  - Suitable for home or business settings.
+  - Qualified for contract use.
+
+  CONSTRUCTION
+  - 5-wheel plastic coated aluminum base.
+  - Pneumatic chair adjust for easy raise/lower action.
+
+  DIMENSIONS
+  - WIDTH 53 CM | 20.87”
+  - DEPTH 51 CM | 20.08”
+  - HEIGHT 80 CM | 31.50”
+  - SEAT HEIGHT 44 CM | 17.32”
+  - SEAT DEPTH 41 CM | 16.14”
+
+  OPTIONS
+  - Soft or hard-floor caster options.
+  - Two choices of seat foam densities:
+  medium (1.8 lb/ft3) or high (2.8 lb/ft3)
+  - Armless or 8 position PU armrests
+
+  MATERIALS
+  SHELL BASE GLIDER
+  - Cast Aluminum with modified nylon PA6/PA66 coating.
+  - Shell thickness: 10 mm.
+  SEAT
+  - HD36 foam
+
+  COUNTRY OF ORIGIN
+  - Italy
+```

@@ -1,4 +1,4 @@
-from IPython.display import HTML, display
+from IPython.display import HTML, display  # type: ignore
 
 from main import get_completion
 
@@ -110,7 +110,7 @@ def execute():
     # plastic upholstery. With a 5-wheel base and pneumatic chair adjust, it's both stylish and functional. Made in
     # Italy.
 
-    len(response)
+    len(response)  # 344
 
     # ** 3rd prompt: Specifying the tone of the response
     # **Issue 2: Text focuses on the wrong details
