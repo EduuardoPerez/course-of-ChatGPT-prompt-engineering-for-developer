@@ -113,7 +113,7 @@ def execute():
     len(response)  # 344
 
     # ** 3rd prompt: Specifying the tone of the response
-    # **Issue 2: Text focuses on the wrong details
+    # ** Issue 2: Text focuses on the wrong details
     # ** -----------------------------
     # ** Ask it to focus on the aspects that are relevant to the intended audience
     prompt = f"""
@@ -172,7 +172,7 @@ def execute():
     # practical. Available with or without armrests and suitable for contract use. Product ID: SWC-100, SWC-110.
 
     # ** 5th prompt: Organizing information
-    # **Issue 3: Description needs a table of dimensions
+    # ** Issue 3: Description needs a table of dimensions
     # ** -----------------------------
     # ** Ask it to extract information and organize it in a table
     prompt = f"""

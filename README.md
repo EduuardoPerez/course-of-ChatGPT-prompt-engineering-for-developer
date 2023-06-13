@@ -719,7 +719,7 @@ This chair is made in Italy and is the perfect combination of style and function
 
 ###### 2nd prompt: limiting the response
 
-Limit the number of words/sentences/characters
+Limit the number of words/sentences/characters, to solve the first issue we got, the text is too long.
 
 ```plain
 Your task is to help a marketing team create a
@@ -781,7 +781,7 @@ Introducing our mid-century inspired office chair, perfect for home or business 
 
 ###### 3rd prompt: specifying the tone of the response
 
-Ask it to focus on the aspects that are relevant to the intended audience
+Ask it to focus on the aspects that are relevant to the intended audience, to solve the second issue we got, the text is focuses on the wrong details.
 
 ```plain
 Your task is to help a marketing team create a
@@ -916,7 +916,7 @@ Introducing our mid-century inspired office chair, perfect for home or business 
 
 ###### 5th prompt: asking to organize the information
 
-Ask it to extract information and organize it in a table, it could alse be requested to organize the information in a JSON format, or any other useful format for your case.
+Ask it to extract information and organize it in a table, it could also be requested to organize the information in a JSON format, or any other useful format for your case. This is intending to solved the third issue we got, the description needs a table of dimensions.
 
 ```plain
 Your task is to help a marketing team create a
