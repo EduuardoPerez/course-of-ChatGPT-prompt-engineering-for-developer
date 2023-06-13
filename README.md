@@ -50,39 +50,39 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
     - [Class 01: Introduction](#class-01-introduction)
     - [Class 02: Guidelines](#class-02-guidelines)
       - [Prompting Principles](#prompting-principles)
-        - [**Principle 1: Write clear and specific instructions**](#principle-1-write-clear-and-specific-instructions)
-        - [**Principle 2: Give the model time to "think"**](#principle-2-give-the-model-time-to-think)
+        - [Principle 1: Write clear and specific instructions](#principle-1-write-clear-and-specific-instructions)
+        - [Principle 2: Give the model time to "think"](#principle-2-give-the-model-time-to-think)
       - [Principle 1. Tactic 1: Use delimiters to clearly indicate distinct parts of the input](#principle-1-tactic-1-use-delimiters-to-clearly-indicate-distinct-parts-of-the-input)
-        - [**Example Prompt. Principle 1. Tactic 1.**](#example-prompt-principle-1-tactic-1)
-          - [**Example template. Principle 1. Tactic 1.**](#example-template-principle-1-tactic-1)
-          - [**Full example. Principle 1. Tactic 1.**](#full-example-principle-1-tactic-1)
-          - [**Model response. Principle 1. Tactic 1.**](#model-response-principle-1-tactic-1)
+        - [Example Prompt. Principle 1. Tactic 1](#example-prompt-principle-1-tactic-1)
+          - [Example template. Principle 1. Tactic 1](#example-template-principle-1-tactic-1)
+          - [Full example. Principle 1. Tactic 1](#full-example-principle-1-tactic-1)
+          - [Model response. Principle 1. Tactic 1](#model-response-principle-1-tactic-1)
       - [Principle 1. Tactic 2: Ask for a structured output](#principle-1-tactic-2-ask-for-a-structured-output)
-        - [**Example Prompt. Principle 1. Tactic 2.**](#example-prompt-principle-1-tactic-2)
-          - [**Example template. Principle 1. Tactic 2.**](#example-template-principle-1-tactic-2)
-          - [**Full example. Principle 1. Tactic 2.**](#full-example-principle-1-tactic-2)
-          - [**Model response. Principle 1. Tactic 2.**](#model-response-principle-1-tactic-2)
+        - [Example Prompt. Principle 1. Tactic 2](#example-prompt-principle-1-tactic-2)
+          - [Example template. Principle 1. Tactic 2](#example-template-principle-1-tactic-2)
+          - [Full example. Principle 1. Tactic 2](#full-example-principle-1-tactic-2)
+          - [Model response. Principle 1. Tactic 2](#model-response-principle-1-tactic-2)
       - [Principle 1. Tactic 3: Ask the model to check whether conditions are satisfied](#principle-1-tactic-3-ask-the-model-to-check-whether-conditions-are-satisfied)
-        - [**Example Prompt. Principle 1. Tactic 3.**](#example-prompt-principle-1-tactic-3)
-          - [**Example template. Principle 1. Tactic 3.**](#example-template-principle-1-tactic-3)
-          - [**Full example 1. Principle 1. Tactic 3.**](#full-example-1-principle-1-tactic-3)
-          - [**Model response example 1. Principle 1. Tactic 3.**](#model-response-example-1-principle-1-tactic-3)
-          - [**Full example 2. Principle 1. Tactic 3.**](#full-example-2-principle-1-tactic-3)
-          - [**Model response example 2. Principle 1. Tactic 3.**](#model-response-example-2-principle-1-tactic-3)
+        - [Example Prompt. Principle 1. Tactic 3](#example-prompt-principle-1-tactic-3)
+          - [Example template. Principle 1. Tactic 3](#example-template-principle-1-tactic-3)
+          - [Full example 1. Principle 1. Tactic 3](#full-example-1-principle-1-tactic-3)
+          - [Model response example 1. Principle 1. Tactic 3](#model-response-example-1-principle-1-tactic-3)
+          - [Full example 2. Principle 1. Tactic 3](#full-example-2-principle-1-tactic-3)
+          - [Model response example 2. Principle 1. Tactic 3](#model-response-example-2-principle-1-tactic-3)
       - [Principle 1. Tactic 4: "Few-shot" prompting](#principle-1-tactic-4-few-shot-prompting)
-        - [**Example Prompt. Principle 1. Tactic 4.**](#example-prompt-principle-1-tactic-4)
-          - [**Example. Principle 1. Tactic 4.**](#example-principle-1-tactic-4)
-          - [**Model response. Principle 1. Tactic 4.**](#model-response-principle-1-tactic-4)
+        - [Example Prompt. Principle 1. Tactic 4](#example-prompt-principle-1-tactic-4)
+          - [Example. Principle 1. Tactic 4](#example-principle-1-tactic-4)
+          - [Model response. Principle 1. Tactic 4](#model-response-principle-1-tactic-4)
       - [Principle 2. Tactic 1: Specify the steps required to complete a task](#principle-2-tactic-1-specify-the-steps-required-to-complete-a-task)
-        - [**Example Prompt. Principle 2. Tactic 1.**](#example-prompt-principle-2-tactic-1)
-          - [**Example template. Principle 2. Tactic 1.**](#example-template-principle-2-tactic-1)
-          - [**Full example 1. Principle 2. Tactic 1.**](#full-example-1-principle-2-tactic-1)
-          - [**Model response example 1. Principle 2. Tactic 1.**](#model-response-example-1-principle-2-tactic-1)
-          - [**Full example 2. Principle 2. Tactic 1. Ask for output in a specified format**](#full-example-2-principle-2-tactic-1-ask-for-output-in-a-specified-format)
-          - [**Model response example 2. Principle 2. Tactic 1.**](#model-response-example-2-principle-2-tactic-1)
+        - [Example Prompt. Principle 2. Tactic 1](#example-prompt-principle-2-tactic-1)
+          - [Example template. Principle 2. Tactic 1](#example-template-principle-2-tactic-1)
+          - [Full example 1. Principle 2. Tactic 1](#full-example-1-principle-2-tactic-1)
+          - [Model response example 1. Principle 2. Tactic 1](#model-response-example-1-principle-2-tactic-1)
+          - [Full example 2. Principle 2. Tactic 1. Ask for output in a specified format](#full-example-2-principle-2-tactic-1-ask-for-output-in-a-specified-format)
+          - [Model response example 2. Principle 2. Tactic 1](#model-response-example-2-principle-2-tactic-1)
       - [Principle 2. Tactic 2: Instruct the model to work out its own solution before rushing to a conclusion](#principle-2-tactic-2-instruct-the-model-to-work-out-its-own-solution-before-rushing-to-a-conclusion)
-        - [**Example Prompt. Principle 2. Tactic 2.**](#example-prompt-principle-2-tactic-2)
-          - [**Model response. Principle 2. Tactic 2.**](#model-response-principle-2-tactic-2)
+        - [Example Prompt. Principle 2. Tactic 2](#example-prompt-principle-2-tactic-2)
+          - [Model response. Principle 2. Tactic 2](#model-response-principle-2-tactic-2)
       - [Model Limitations: Hallucinations](#model-limitations-hallucinations)
         - [Example of an Hallucination of the LLM](#example-of-an-hallucination-of-the-llm)
     - [Class 03: Iterative](#class-03-iterative)
@@ -147,11 +147,11 @@ This class provides guidelines for effective prompting, focusing on two key prin
 
 #### Prompting Principles
 
-##### **Principle 1: Write clear and specific instructions**
+##### Principle 1: Write clear and specific instructions
 
   The first principle emphasizes the importance of providing clear and specific instructions to guide the model towards the desired output, highlighting that longer prompts can often offer more clarity and context for generating detailed and relevant responses.
 
-##### **Principle 2: Give the model time to "think"**
+##### Principle 2: Give the model time to "think"
 
   The second principle advises giving the model sufficient time to think and reason, as rushing it may lead to incorrect conclusions, suggesting that complex tasks require more computational effort and encouraging reframing queries to prompt a chain of relevant reasoning before providing a final answer.
 
@@ -170,23 +170,23 @@ Delimiters serve as clear punctuation to separate specific sections of text from
 
 ![Principle 1. Tactic 1. Avoid prompt injections](class/../classes/src/class02-principle1-tactic1-avoid-prompt-injection.png)
 
-##### **Example Prompt. Principle 1. Tactic 1.**
+##### Example Prompt. Principle 1. Tactic 1
 
-###### **Example template. Principle 1. Tactic 1.**
+###### Example template. Principle 1. Tactic 1
 
 ```plain
 Summarize the text delimited by triple backticks into a single sentence.
 ```text```
 ```
 
-###### **Full example. Principle 1. Tactic 1.**
+###### Full example. Principle 1. Tactic 1
 
 ```plain
 Summarize the text delimited by triple backticks into a single sentence.
 ```You should express what you want a model to do by providing instructions that are as clear and specific as you can possibly make them. This will guide the model towards the desired output, and reduce the chances of receiving irrelevant or incorrect responses. Don't confuse writing a clear prompt with writing a short prompt. In many cases, longer prompts provide more clarity and context for the model, which can lead to more detailed and relevant outputs.```
 ```
 
-###### **Model response. Principle 1. Tactic 1.**
+###### Model response. Principle 1. Tactic 1
 
 ```plain
 Clear and specific instructions should be provided to guide a model towards the desired output, and longer prompts can provide more clarity and context for the model, leading to more detailed and relevant outputs.
@@ -198,9 +198,9 @@ Clear and specific instructions should be provided to guide a model towards the 
 
 To facilitate parsing model outputs, asking for a structured output like HTML or JSON can be useful. For example, requesting a list of three fictional book titles along with their authors and genres in JSON format allows easy conversion into a dictionary or list in Python.
 
-##### **Example Prompt. Principle 1. Tactic 2.**
+##### Example Prompt. Principle 1. Tactic 2
 
-###### **Example template. Principle 1. Tactic 2.**
+###### Example template. Principle 1. Tactic 2
 
 ```plain
 Generate a list of {some requirement}.
@@ -208,14 +208,14 @@ Provide them in JSON format with the following keys:
 {relevant keys}.
 ```
 
-###### **Full example. Principle 1. Tactic 2.**
+###### Full example. Principle 1. Tactic 2
 
 ```plain
 Generate a list of three made-up book titles along with their authors and genres.
 Provide them in JSON format with the following keys: book_id, title, author, genre.
 ```
 
-###### **Model response. Principle 1. Tactic 2.**
+###### Model response. Principle 1. Tactic 2
 
 ```json
 [
@@ -246,9 +246,9 @@ Provide them in JSON format with the following keys: book_id, title, author, gen
 
 To ensure task assumptions are met, asking the model to check conditions beforehand can help avoid errors and incomplete attempts. Considering edge cases and defining how the model should handle them is also important to prevent unexpected outcomes.
 
-##### **Example Prompt. Principle 1. Tactic 3.**
+##### Example Prompt. Principle 1. Tactic 3
 
-###### **Example template. Principle 1. Tactic 3.**
+###### Example template. Principle 1. Tactic 3
 
 ```plain
 You will be provided with text delimited by triple quotes.
@@ -266,7 +266,7 @@ If the text does not contain a sequence of instructions, then simply write "No s
 """
 ```
 
-###### **Full example 1. Principle 1. Tactic 3.**
+###### Full example 1. Principle 1. Tactic 3
 
 ```plain
 You will be provided with text delimited by triple quotes.
@@ -284,7 +284,7 @@ Making a cup of tea is easy! First, you need to get some water boiling. While th
 """
 ```
 
-###### **Model response example 1. Principle 1. Tactic 3.**
+###### Model response example 1. Principle 1. Tactic 3
 
 ```plain
 Completion for Text 1:
@@ -297,7 +297,7 @@ Step 6 - Add some sugar or milk to taste.
 Step 7 - Enjoy your delicious cup of tea!
 ```
 
-###### **Full example 2. Principle 1. Tactic 3.**
+###### Full example 2. Principle 1. Tactic 3
 
 ```plain
 You will be provided with text delimited by triple quotes.
@@ -315,7 +315,7 @@ The sun is shining brightly today, and the birds are singing. It's a beautiful d
 """
 ```
 
-###### **Model response example 2. Principle 1. Tactic 3.**
+###### Model response example 2. Principle 1. Tactic 3
 
 ```plain
 No steps provided.
@@ -327,11 +327,11 @@ No steps provided.
 
 The final tactic for this principle is using few-shot prompting, which involves providing examples of successful task executions before asking the model to perform the desired task.
 
-##### **Example Prompt. Principle 1. Tactic 4.**
+##### Example Prompt. Principle 1. Tactic 4
 
 The prompt instructs the model to answer in a consistent style by providing examples of a conversation between a child and a grandparent. The model is asked to teach about patience and then about resilience, and it responds in a similar tone, using metaphors to convey the desired message.
 
-###### **Example. Principle 1. Tactic 4.**
+###### Example. Principle 1. Tactic 4
 
 ```plain
 Your task is to answer in a consistent style.
@@ -342,7 +342,7 @@ Your task is to answer in a consistent style.
 <child>: Teach me about resilience.
 ```
 
-###### **Model response. Principle 1. Tactic 4.**
+###### Model response. Principle 1. Tactic 4
 
 ```plain
 <grandparent>: Resilience is like a tree that bends with the wind but never breaks. It is the ability to bounce back from adversity and keep moving forward, even when things get tough. Just like a tree that grows stronger with each storm it weathers, resilience is a quality that can be developed and strengthened over time.
@@ -354,9 +354,9 @@ Your task is to answer in a consistent style.
 
 The first tactic of the second principle, is to provide specific instructions for a task, such as summarizing a text, translating it into French, listing names, and outputting a JSON object with specific keys, while separating the answers with line breaks.
 
-##### **Example Prompt. Principle 2. Tactic 1.**
+##### Example Prompt. Principle 2. Tactic 1
 
-###### **Example template. Principle 2. Tactic 1.**
+###### Example template. Principle 2. Tactic 1
 
 ```plain
 Perform the following actions:
@@ -371,7 +371,7 @@ Text:
 ```{text}```
 ```
 
-###### **Full example 1. Principle 2. Tactic 1.**
+###### Full example 1. Principle 2. Tactic 1
 
 ```plain
 Perform the following actions:
@@ -386,7 +386,7 @@ Text:
 ```In a charming village, siblings Jack and Jill set out on a quest to fetch water from a hilltop well. As they climbed, singing joyfully, misfortune struck—Jack tripped on a stone and tumbled down the hill, with Jill following suit. Though slightly battered, the pair returned home to comforting embraces. Despite the mishap, their adventurous spirits remained undimmed, and they continued exploring with delight.```
 ```
 
-###### **Model response example 1. Principle 2. Tactic 1.**
+###### Model response example 1. Principle 2. Tactic 1
 
 ```plain
 Two siblings, Jack and Jill, go on a quest to fetch water from a well on a hilltop, but misfortune strikes and they both tumble down the hill, returning home slightly battered but with their adventurous spirits undimmed.
@@ -399,7 +399,7 @@ Deux frères et sœurs, Jack et Jill, partent en quête d'eau d'un puits sur une
 }
 ```
 
-###### **Full example 2. Principle 2. Tactic 1. Ask for output in a specified format**
+###### Full example 2. Principle 2. Tactic 1. Ask for output in a specified format
 
 ```plain
 Your task is to perform the following actions:
@@ -422,7 +422,7 @@ Output JSON: <json with summary and num_names>
 Text: <In a charming village, siblings Jack and Jill set out on a quest to fetch water from a hilltop well. As they climbed, singing joyfully, misfortune struck—Jack tripped on a stone and tumbled down the hill, with Jill following suit. Though slightly battered, the pair returned home to comforting embraces. Despite the mishap, their adventurous spirits remained undimmed, and they continued exploring with delight.>
 ```
 
-###### **Model response example 2. Principle 2. Tactic 1.**
+###### Model response example 2. Principle 2. Tactic 1
 
 ```plain
 Summary: Jack and Jill, siblings from a charming village, embarked on a quest to fetch water but encountered misfortune along the way. Despite the mishap, their adventurous spirits persisted.
@@ -444,7 +444,7 @@ Output JSON:
 
 Instructing the model to reason and work out its own solution before reaching a conclusion can lead to better results, similar to giving the model time to think and allowing it to mimic human judgment in evaluating the correctness of a student's solution.
 
-##### **Example Prompt. Principle 2. Tactic 2.**
+##### Example Prompt. Principle 2. Tactic 2
 
 The prompt instructs the model to determine if the student's solution is correct by first working out its own solution to the problem, comparing it to the student's solution, and evaluating their correctness. The format includes the question, student's solution, actual solution, agreement status (yes or no), and the student's grade (correct or incorrect). By breaking down the task and giving the model more time to think, it can provide accurate evaluations and assessments.
 
@@ -500,7 +500,7 @@ Total cost: 100x + 250x + 100,000 + 100x = 450x + 100,000
 Actual solution:
 ```
 
-###### **Model response. Principle 2. Tactic 2.**
+###### Model response. Principle 2. Tactic 2
 
 ```plain
 Question:
