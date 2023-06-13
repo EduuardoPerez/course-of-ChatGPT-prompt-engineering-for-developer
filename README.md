@@ -91,6 +91,9 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
           - [Expanding the prompt guidelines](#expanding-the-prompt-guidelines)
         - [Example summarizing a fact sheet for a chair for a marketing team](#example-summarizing-a-fact-sheet-for-a-chair-for-a-marketing-team)
           - [1st prompt: without any improvement](#1st-prompt-without-any-improvement)
+          - [Model response. 1st prompt: without any improvement](#model-response-1st-prompt-without-any-improvement)
+          - [2nd prompt: limiting the response](#2nd-prompt-limiting-the-response)
+          - [Model response. 2nd prompt: limiting the response](#model-response-2nd-prompt-limiting-the-response)
 
 ## Personal notion documentation
 
@@ -692,4 +695,80 @@ SEAT
 
 COUNTRY OF ORIGIN
 - Italy```
+```
+
+###### Model response. 1st prompt: without any improvement
+
+```plain
+Introducing our stunning mid-century inspired office chair, the perfect addition to any home or business setting. Part of a beautiful family of office furniture, including filing cabinets, desks, bookcases, meeting tables, and more, this chair is available in several options of shell color and base finishes to suit your style. Choose from plastic back and front upholstery (SWC-100) or full upholstery (SWC-110) in 10 fabric and 6 leather options.
+
+The chair is constructed with a 5-wheel plastic coated aluminum base and features a pneumatic chair adjust for easy raise/lower action. It is available with or without armrests and is qualified for contract use. The base finish options are stainless steel, matte black, gloss white, or chrome.
+
+Measuring at a width of 53 cm, depth of 51 cm, and height of 80 cm, with a seat height of 44 cm and seat depth of 41 cm, this chair is designed for ultimate comfort. You can also choose between soft or hard-floor caster options and two choices of seat foam densities: medium (1.8 lb/ft3) or high (2.8 lb/ft3). The armrests are available in either an armless or 8 position PU option.
+
+The materials used in the construction of this chair are of the highest quality. The shell base glider is made of cast aluminum with modified nylon PA6/PA66 coating and has a shell thickness of 10 mm. The seat is made of HD36 foam, ensuring maximum comfort and durability.
+
+This chair is made in Italy and is the perfect combination of style and functionality. Upgrade your workspace with our mid-century inspired office chair today!
+```
+
+###### 2nd prompt: limiting the response
+
+Limit the number of words/sentences/characters
+
+```plain
+Your task is to help a marketing team create a
+description for a retail website of a product based
+on a technical fact sheet.
+
+Write a product description based on the information
+provided in the technical specifications delimited by
+triple backticks.
+
+Use at most 50 words.
+
+Technical specifications:
+```OVERVIEW
+- Part of a beautiful family of mid-century inspired office furniture,
+including filing cabinets, desks, bookcases, meeting tables, and more.
+- Several options of shell color and base finishes.
+- Available with plastic back and front upholstery (SWC-100)
+or full upholstery (SWC-110) in 10 fabric and 6 leather options.
+- Base finish options are: stainless steel, matte black,
+gloss white, or chrome.
+- Chair is available with or without armrests.
+- Suitable for home or business settings.
+- Qualified for contract use.
+
+CONSTRUCTION
+- 5-wheel plastic coated aluminum base.
+- Pneumatic chair adjust for easy raise/lower action.
+
+DIMENSIONS
+- WIDTH 53 CM | 20.87”
+- DEPTH 51 CM | 20.08”
+- HEIGHT 80 CM | 31.50”
+- SEAT HEIGHT 44 CM | 17.32”
+- SEAT DEPTH 41 CM | 16.14”
+
+OPTIONS
+- Soft or hard-floor caster options.
+- Two choices of seat foam densities:
+medium (1.8 lb/ft3) or high (2.8 lb/ft3)
+- Armless or 8 position PU armrests
+
+MATERIALS
+SHELL BASE GLIDER
+- Cast Aluminum with modified nylon PA6/PA66 coating.
+- Shell thickness: 10 mm.
+SEAT
+- HD36 foam
+
+COUNTRY OF ORIGIN
+- Italy```
+```
+
+###### Model response. 2nd prompt: limiting the response
+
+```plain
+Introducing our mid-century inspired office chair, perfect for home or business settings. Available in a range of shell colors and base finishes, with or without armrests. Choose from 10 fabric and 6 leather options for full or plastic upholstery. With a 5-wheel base and pneumatic chair adjust, it's both stylish and functional. Made in Italy.
 ```
