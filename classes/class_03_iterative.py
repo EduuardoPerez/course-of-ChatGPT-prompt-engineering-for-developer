@@ -110,7 +110,9 @@ def execute():
     # plastic upholstery. With a 5-wheel base and pneumatic chair adjust, it's both stylish and functional. Made in
     # Italy.
 
-    len(response)  # 344
+    # the quantity of words is not the exact quantity of words we wanted, but it's nearly the same. This is something
+    # common to happen with the LLMs, they're near the goal, but it isn't usual to get the exact quantity
+    len(response.split(" "))  # 55
 
     # ** 3rd prompt: Specifying the tone of the response
     # ** Issue 2: Text focuses on the wrong details

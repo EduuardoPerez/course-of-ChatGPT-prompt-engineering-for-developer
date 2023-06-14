@@ -100,6 +100,7 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
           - [Model response. 4th prompt: asking to add specific details](#model-response-4th-prompt-asking-to-add-specific-details)
           - [5th prompt: asking to organize the information](#5th-prompt-asking-to-organize-the-information)
           - [Model response. 5th prompt: asking to organize the information](#model-response-5th-prompt-asking-to-organize-the-information)
+      - [Conclusion of iterative Prompt Development](#conclusion-of-iterative-prompt-development)
 
 ## Personal notion documentation
 
@@ -1028,3 +1029,12 @@ COUNTRY OF ORIGIN
   <p>SWC-100, SWC-110</p>
 </div>
 ```
+
+This is how the HTML model response looks like:
+![HTML model response](classes/src/class03-HMTL-model-response.png)
+
+#### Conclusion of iterative Prompt Development
+
+![Conclusion of iterative Prompt Development](classes/src/class03-iterative-prompt-development-conclusion.png)
+
+Whe we are talking about the iterative process of prompt development, we should emphasizes the importance of trying different approaches, evaluating their effectiveness, and refining instructions to achieve the desired results. The key to being an effective prompt engineer lies in having a good process for developing prompts tailored to the specific application. While initially, one example may suffice, for more sophisticated applications, multiple examples and iterative development are recommended. Evaluating prompts against a larger set of examples becomes valuable in the later stages of application development to assess average or worst-case performance and drive incremental prompt improvement.
