@@ -101,6 +101,15 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
           - [5th prompt: asking to organize the information](#5th-prompt-asking-to-organize-the-information)
           - [Model response. 5th prompt: asking to organize the information](#model-response-5th-prompt-asking-to-organize-the-information)
       - [Conclusion of iterative Prompt Development](#conclusion-of-iterative-prompt-development)
+    - [Class 04: summarizing](#class-04-summarizing)
+      - [Techniques to summarize text](#techniques-to-summarize-text)
+        - [Summarize with a word/sentence/character limit](#summarize-with-a-wordsentencecharacter-limit)
+          - [Model response. Summarize with a word/sentence/character limit](#model-response-summarize-with-a-wordsentencecharacter-limit)
+        - [Summarize focusing on a specific objective](#summarize-focusing-on-a-specific-objective)
+          - [Example prompt 1. Summarize with a focus on shipping and delivery](#example-prompt-1-summarize-with-a-focus-on-shipping-and-delivery)
+          - [Model response. Example prompt 1. Summarize with a focus on shipping and delivery](#model-response-example-prompt-1-summarize-with-a-focus-on-shipping-and-delivery)
+          - [Example prompt 2. Summarize with a focus on price and value](#example-prompt-2-summarize-with-a-focus-on-price-and-value)
+          - [Model response. Example prompt 2. Summarize with a focus on price and value](#model-response-example-prompt-2-summarize-with-a-focus-on-price-and-value)
 
 ## Personal notion documentation
 
@@ -1038,3 +1047,68 @@ This is how the HTML model response looks like:
 ![Conclusion of iterative Prompt Development](classes/src/class03-iterative-prompt-development-conclusion.png)
 
 Whe we are talking about the iterative process of prompt development, we should emphasizes the importance of trying different approaches, evaluating their effectiveness, and refining instructions to achieve the desired results. The key to being an effective prompt engineer lies in having a good process for developing prompts tailored to the specific application. While initially, one example may suffice, for more sophisticated applications, multiple examples and iterative development are recommended. Evaluating prompts against a larger set of examples becomes valuable in the later stages of application development to assess average or worst-case performance and drive incremental prompt improvement.
+
+### Class 04: summarizing
+
+Large language models like chatGPT can be used to summarize text, allowing users to quickly understand the content of articles and read more efficiently, either through the web interface or programmatically.
+
+#### Techniques to summarize text
+
+##### Summarize with a word/sentence/character limit
+
+Request to summarize limiting by the quantity of words, sentence or character.
+
+```plain
+Your task is to generate a short summary of a product review from an ecommerce site.
+
+Summarize the review below, delimited by triple backticks, in at most 30 words.
+
+Review:
+```Got this panda plush toy for my daughter's birthday, who loves it and takes it everywhere. It's soft and super cute, and its face has a friendly look. It's a bit small for what I paid though. I think there might be other options that are bigger for the same price. It arrived a day earlier than expected, so I got to play with it myself before I gave it to her.```
+```
+
+###### Model response. Summarize with a word/sentence/character limit
+
+```plain
+Soft and cute panda plush toy loved by daughter, but a bit small for the price. Arrived early.
+```
+
+##### Summarize focusing on a specific objective
+
+Modifying the prompt when creating a summary allows for generating more targeted and applicable summaries based on specific purposes, such as providing feedback to different departments within a business. By adjusting the prompt to focus on aspects related to shipping or pricing, the generated summaries highlight relevant information for those departments, providing more specific insights.
+
+Request to get focus on specific details.
+
+###### Example prompt 1. Summarize with a focus on shipping and delivery
+
+```plain
+Your task is to generate a short summary of a product review from an ecommerce site to give feedback to the Shipping department.
+
+Summarize the review below, delimited by triple backticks, in at most 30 words, and focusing on any aspects that mention shipping and delivery of the product.
+
+Review:
+```Got this panda plush toy for my daughter's birthday, who loves it and takes it everywhere. It's soft and super cute, and its face has a friendly look. It's a bit small for what I paid though. I think there might be other options that are bigger for the same price. It arrived a day earlier than expected, so I got to play with it myself before I gave it to her.```
+```
+
+###### Model response. Example prompt 1. Summarize with a focus on shipping and delivery
+
+```plain
+The panda plush toy arrived a day earlier than expected, but the customer felt it was a bit small for the price paid.
+```
+
+###### Example prompt 2. Summarize with a focus on price and value
+
+```plain
+Your task is to generate a short summary of a product review from an ecommerce site to give feedback to the Shipping department.
+
+Summarize the review below, delimited by triple backticks, in at most 30 words, and focusing on any aspects that are relevant to the price and perceived value.
+
+Review:
+```Got this panda plush toy for my daughter's birthday, who loves it and takes it everywhere. It's soft and super cute, and its face has a friendly look. It's a bit small for what I paid though. I think there might be other options that are bigger for the same price. It arrived a day earlier than expected, so I got to play with it myself before I gave it to her.```
+```
+
+###### Model response. Example prompt 2. Summarize with a focus on price and value
+
+```plain
+The panda plush toy is soft, cute, and loved by the recipient, but the price may be too high for its size.
+```
