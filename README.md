@@ -110,6 +110,8 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
           - [Model response. Example prompt 1. Summarize with a focus on shipping and delivery](#model-response-example-prompt-1-summarize-with-a-focus-on-shipping-and-delivery)
           - [Example prompt 2. Summarize with a focus on price and value](#example-prompt-2-summarize-with-a-focus-on-price-and-value)
           - [Model response. Example prompt 2. Summarize with a focus on price and value](#model-response-example-prompt-2-summarize-with-a-focus-on-price-and-value)
+        - [Try "extract" instead of "summarize"](#try-extract-instead-of-summarize)
+          - [Model response. Try "extract" instead of "summarize"](#model-response-try-extract-instead-of-summarize)
 
 ## Personal notion documentation
 
@@ -1111,4 +1113,23 @@ Review:
 
 ```plain
 The panda plush toy is soft, cute, and loved by the recipient, but the price may be too high for its size.
+```
+
+##### Try "extract" instead of "summarize"
+
+By modifying the prompt to extract relevant information instead of summarizing it, a more focused output can be generated. For example, when tasked with providing feedback to the shipping department, the prompt can be adjusted to extract specific details, such as the product arriving a day earlier than expected, without including additional information that may be useful for a general summary but less relevant to the shipping department's specific needs.
+
+```plain
+Your task is to extract relevant information from a product review from an ecommerce site to give feedback to the Shipping department.
+
+From the review below, delimited by triple quotes extract the information relevant to shipping and delivery. Limit to 30 words.
+
+Review:
+```Got this panda plush toy for my daughter's birthday, who loves it and takes it everywhere. It's soft and super cute, and its face has a friendly look. It's a bit small for what I paid though. I think there might be other options that are bigger for the same price. It arrived a day earlier than expected, so I got to play with it myself before I gave it to her.```
+```
+
+###### Model response. Try "extract" instead of "summarize"
+
+```plain
+The product arrived a day earlier than expected.
 ```
