@@ -101,17 +101,31 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
           - [5th prompt: asking to organize the information](#5th-prompt-asking-to-organize-the-information)
           - [Model response. 5th prompt: asking to organize the information](#model-response-5th-prompt-asking-to-organize-the-information)
       - [Conclusion of iterative Prompt Development](#conclusion-of-iterative-prompt-development)
-    - [Class 04: summarizing](#class-04-summarizing)
-      - [Techniques to summarize text](#techniques-to-summarize-text)
-        - [Summarize with a word/sentence/character limit](#summarize-with-a-wordsentencecharacter-limit)
-          - [Model response. Summarize with a word/sentence/character limit](#model-response-summarize-with-a-wordsentencecharacter-limit)
-        - [Summarize focusing on a specific objective](#summarize-focusing-on-a-specific-objective)
-          - [Example prompt 1. Summarize with a focus on shipping and delivery](#example-prompt-1-summarize-with-a-focus-on-shipping-and-delivery)
-          - [Model response. Example prompt 1. Summarize with a focus on shipping and delivery](#model-response-example-prompt-1-summarize-with-a-focus-on-shipping-and-delivery)
-          - [Example prompt 2. Summarize with a focus on price and value](#example-prompt-2-summarize-with-a-focus-on-price-and-value)
-          - [Model response. Example prompt 2. Summarize with a focus on price and value](#model-response-example-prompt-2-summarize-with-a-focus-on-price-and-value)
-        - [Try "extract" instead of "summarize"](#try-extract-instead-of-summarize)
-          - [Model response. Try "extract" instead of "summarize"](#model-response-try-extract-instead-of-summarize)
+    - [Class 04: Summarizing](#class-04-summarizing)
+      - [Summarize with a word/sentence/character limit](#summarize-with-a-wordsentencecharacter-limit)
+        - [Model response. Summarize with a word/sentence/character limit](#model-response-summarize-with-a-wordsentencecharacter-limit)
+      - [Summarize focusing on a specific objective](#summarize-focusing-on-a-specific-objective)
+        - [Example prompt 1. Summarize with a focus on shipping and delivery](#example-prompt-1-summarize-with-a-focus-on-shipping-and-delivery)
+        - [Model response. Example prompt 1. Summarize with a focus on shipping and delivery](#model-response-example-prompt-1-summarize-with-a-focus-on-shipping-and-delivery)
+        - [Example prompt 2. Summarize with a focus on price and value](#example-prompt-2-summarize-with-a-focus-on-price-and-value)
+        - [Model response. Example prompt 2. Summarize with a focus on price and value](#model-response-example-prompt-2-summarize-with-a-focus-on-price-and-value)
+      - [Try "extract" instead of "summarize"](#try-extract-instead-of-summarize)
+        - [Model response. Try "extract" instead of "summarize"](#model-response-try-extract-instead-of-summarize)
+    - [Class 05: Inferring](#class-05-inferring)
+      - [Requesting for the sentiment of a text](#requesting-for-the-sentiment-of-a-text)
+        - [Model response. Requesting for the sentiment of a text](#model-response-requesting-for-the-sentiment-of-a-text)
+      - [Asking if a text sentiment is positive or negative](#asking-if-a-text-sentiment-is-positive-or-negative)
+        - [Model response. Asking if a text sentiment is positive or negative](#model-response-asking-if-a-text-sentiment-is-positive-or-negative)
+      - [Identifying types of emotions in a text](#identifying-types-of-emotions-in-a-text)
+        - [Model response. Identifying types of emotions in a text](#model-response-identifying-types-of-emotions-in-a-text)
+      - [Asking to identify anger in a text](#asking-to-identify-anger-in-a-text)
+        - [Model response. Asking to identify anger in a text](#model-response-asking-to-identify-anger-in-a-text)
+      - [Requesting to extract specific details from a text](#requesting-to-extract-specific-details-from-a-text)
+        - [Model response. Requesting to extract specific details from a text](#model-response-requesting-to-extract-specific-details-from-a-text)
+      - [Asking the model to do multiple inferring tasks at the same time](#asking-the-model-to-do-multiple-inferring-tasks-at-the-same-time)
+        - [Model response. Asking the model to do multiple inferring tasks at the same time](#model-response-asking-the-model-to-do-multiple-inferring-tasks-at-the-same-time)
+      - [Making the model to infer the topic in a text](#making-the-model-to-infer-the-topic-in-a-text)
+        - [Model response. Making the model to infer the topic in a text](#model-response-making-the-model-to-infer-the-topic-in-a-text)
 
 ## Personal notion documentation
 
@@ -1041,7 +1055,7 @@ COUNTRY OF ORIGIN
 </div>
 ```
 
-This is how the HTML model response looks like:
+This is how the HTML model response looks like:\
 ![HTML model response](classes/src/class03-HMTL-model-response.png)
 
 #### Conclusion of iterative Prompt Development
@@ -1050,13 +1064,13 @@ This is how the HTML model response looks like:
 
 Whe we are talking about the iterative process of prompt development, we should emphasizes the importance of trying different approaches, evaluating their effectiveness, and refining instructions to achieve the desired results. The key to being an effective prompt engineer lies in having a good process for developing prompts tailored to the specific application. While initially, one example may suffice, for more sophisticated applications, multiple examples and iterative development are recommended. Evaluating prompts against a larger set of examples becomes valuable in the later stages of application development to assess average or worst-case performance and drive incremental prompt improvement.
 
-### Class 04: summarizing
+### Class 04: Summarizing
 
 Large language models like chatGPT can be used to summarize text, allowing users to quickly understand the content of articles and read more efficiently, either through the web interface or programmatically.
 
-#### Techniques to summarize text
+We could use the next techniques to summarize text.
 
-##### Summarize with a word/sentence/character limit
+#### Summarize with a word/sentence/character limit
 
 Request to summarize limiting by the quantity of words, sentence or character.
 
@@ -1069,19 +1083,19 @@ Review:
 ```Got this panda plush toy for my daughter's birthday, who loves it and takes it everywhere. It's soft and super cute, and its face has a friendly look. It's a bit small for what I paid though. I think there might be other options that are bigger for the same price. It arrived a day earlier than expected, so I got to play with it myself before I gave it to her.```
 ```
 
-###### Model response. Summarize with a word/sentence/character limit
+##### Model response. Summarize with a word/sentence/character limit
 
 ```plain
 Soft and cute panda plush toy loved by daughter, but a bit small for the price. Arrived early.
 ```
 
-##### Summarize focusing on a specific objective
+#### Summarize focusing on a specific objective
 
 Modifying the prompt when creating a summary allows for generating more targeted and applicable summaries based on specific purposes, such as providing feedback to different departments within a business. By adjusting the prompt to focus on aspects related to shipping or pricing, the generated summaries highlight relevant information for those departments, providing more specific insights.
 
 Request to get focus on specific details.
 
-###### Example prompt 1. Summarize with a focus on shipping and delivery
+##### Example prompt 1. Summarize with a focus on shipping and delivery
 
 ```plain
 Your task is to generate a short summary of a product review from an ecommerce site to give feedback to the Shipping department.
@@ -1092,13 +1106,13 @@ Review:
 ```Got this panda plush toy for my daughter's birthday, who loves it and takes it everywhere. It's soft and super cute, and its face has a friendly look. It's a bit small for what I paid though. I think there might be other options that are bigger for the same price. It arrived a day earlier than expected, so I got to play with it myself before I gave it to her.```
 ```
 
-###### Model response. Example prompt 1. Summarize with a focus on shipping and delivery
+##### Model response. Example prompt 1. Summarize with a focus on shipping and delivery
 
 ```plain
 The panda plush toy arrived a day earlier than expected, but the customer felt it was a bit small for the price paid.
 ```
 
-###### Example prompt 2. Summarize with a focus on price and value
+##### Example prompt 2. Summarize with a focus on price and value
 
 ```plain
 Your task is to generate a short summary of a product review from an ecommerce site to give feedback to the Shipping department.
@@ -1109,13 +1123,13 @@ Review:
 ```Got this panda plush toy for my daughter's birthday, who loves it and takes it everywhere. It's soft and super cute, and its face has a friendly look. It's a bit small for what I paid though. I think there might be other options that are bigger for the same price. It arrived a day earlier than expected, so I got to play with it myself before I gave it to her.```
 ```
 
-###### Model response. Example prompt 2. Summarize with a focus on price and value
+##### Model response. Example prompt 2. Summarize with a focus on price and value
 
 ```plain
 The panda plush toy is soft, cute, and loved by the recipient, but the price may be too high for its size.
 ```
 
-##### Try "extract" instead of "summarize"
+#### Try "extract" instead of "summarize"
 
 By modifying the prompt to extract relevant information instead of summarizing it, a more focused output can be generated. For example, when tasked with providing feedback to the shipping department, the prompt can be adjusted to extract specific details, such as the product arriving a day earlier than expected, without including additional information that may be useful for a general summary but less relevant to the shipping department's specific needs.
 
@@ -1128,8 +1142,184 @@ Review:
 ```Got this panda plush toy for my daughter's birthday, who loves it and takes it everywhere. It's soft and super cute, and its face has a friendly look. It's a bit small for what I paid though. I think there might be other options that are bigger for the same price. It arrived a day earlier than expected, so I got to play with it myself before I gave it to her.```
 ```
 
-###### Model response. Try "extract" instead of "summarize"
+##### Model response. Try "extract" instead of "summarize"
 
 ```plain
 The product arrived a day earlier than expected.
+```
+
+### Class 05: Inferring
+
+Large language models can perform various text analysis tasks, such as sentiment extraction, label extraction, and name extraction, without the need for separate models or extensive training and deployment processes, making application development faster and more efficient.
+
+#### Requesting for the sentiment of a text
+
+```plain
+What is the sentiment of the following product review, which is delimited with triple backticks?
+
+Review text:
+'''
+Needed a nice lamp for my bedroom, and this one had additional storage and not too high of a price point. Got it fast.  The string to our lamp broke during the transit and the company happily sent over a new one. Came within a few days as well. It was easy to put together.  I had a missing part, so I contacted their support and they very quickly got me the missing piece! Lumina seems to me to be a great company that cares about their customers and products!!
+'''
+```
+
+##### Model response. Requesting for the sentiment of a text
+
+```plain
+The sentiment of the product review is positive.
+```
+
+#### Asking if a text sentiment is positive or negative
+
+```plain
+What is the sentiment of the following product review, which is delimited with triple backticks?
+
+Give your answer as a single word, either "positive" or "negative".
+
+Review text:
+'''
+Needed a nice lamp for my bedroom, and this one had additional storage and not too high of a price point. Got it fast.  The string to our lamp broke during the transit and the company happily sent over a new one. Came within a few days as well. It was easy to put together.  I had a missing part, so I contacted their support and they very quickly got me the missing piece! Lumina seems to me to be a great company that cares about their customers and products!!
+'''
+```
+
+##### Model response. Asking if a text sentiment is positive or negative
+
+```plain
+positive
+```
+
+#### Identifying types of emotions in a text
+
+```plain
+Identify a list of emotions that the writer of the following review is expressing. Include no more than five items in the list. Format your answer as a list of lower-case words separated by commas.
+
+Review text:
+'''
+Needed a nice lamp for my bedroom, and this one had additional storage and not too high of a price point. Got it fast.  The string to our lamp broke during the transit and the company happily sent over a new one. Came within a few days as well. It was easy to put together.  I had a missing part, so I contacted their support and they very quickly got me the missing piece! Lumina seems to me to be a great company that cares about their customers and products!!
+'''
+```
+
+##### Model response. Identifying types of emotions in a text
+
+```plain
+happy, satisfied, grateful, impressed, content
+```
+
+#### Asking to identify anger in a text
+
+```plain
+Is the writer of the following review expressing anger? The review is delimited with triple backticks. Give your answer as either yes or no.
+
+Review text:
+'''
+Needed a nice lamp for my bedroom, and this one had additional storage and not too high of a price point. Got it fast.  The string to our lamp broke during the transit and the company happily sent over a new one. Came within a few days as well. It was easy to put together.  I had a missing part, so I contacted their support and they very quickly got me the missing piece! Lumina seems to me to be a great company that cares about their customers and products!!
+'''
+```
+
+##### Model response. Asking to identify anger in a text
+
+```plain
+No
+```
+
+#### Requesting to extract specific details from a text
+
+```plain
+Identify the following items from the review text:
+- Item purchased by reviewer
+- Company that made the item
+
+The review is delimited with triple backticks. Format your response as a JSON object with "Item" and "Brand" as the keys.
+If the information isn't present, use "unknown" as the value.
+Make your response as short as possible.
+
+Review text:
+'''
+Needed a nice lamp for my bedroom, and this one had additional storage and not too high of a price point. Got it fast.  The string to our lamp broke during the transit and the company happily sent over a new one. Came within a few days as well. It was easy to put together.  I had a missing part, so I contacted their support and they very quickly got me the missing piece! Lumina seems to me to be a great company that cares about their customers and products!!
+'''
+```
+
+##### Model response. Requesting to extract specific details from a text
+
+```json
+{
+    "Item": "lamp",
+    "Brand": "Lumina"
+}
+```
+
+#### Asking the model to do multiple inferring tasks at the same time
+
+```plain
+Identify the following items from the review text:
+- Sentiment (positive or negative)
+- Is the reviewer expressing anger? (true or false)
+- Item purchased by reviewer
+- Company that made the item
+
+The review is delimited with triple backticks. Format your response as a JSON object with "Sentiment", "Anger", "Item" and "Brand" as the keys.
+If the information isn't present, use "unknown" as the value.
+Make your response as short as possible.
+Format the Anger value as a boolean.
+
+Review text:
+'''
+Needed a nice lamp for my bedroom, and this one had additional storage and not too high of a price point. Got it fast.  The string to our lamp broke during the transit and the company happily sent over a new one. Came within a few days as well. It was easy to put together.  I had a missing part, so I contacted their support and they very quickly got me the missing piece! Lumina seems to me to be a great company that cares about their customers and products!!
+'''
+```
+
+##### Model response. Asking the model to do multiple inferring tasks at the same time
+
+```json
+{
+    "Sentiment": "positive",
+    "Anger": false,
+    "Item": "lamp with additional storage",
+    "Brand": "Lumina"
+}
+```
+
+#### Making the model to infer the topic in a text
+
+```plain
+Determine five topics that are being discussed in the following text, which is delimited by triple backticks.
+
+Make each item one or two words long.
+
+Format your response as a list of items separated by commas.
+
+Text sample:
+'''
+In a recent survey conducted by the government,
+public sector employees were asked to rate their level
+of satisfaction with the department they work at.
+The results revealed that NASA was the most popular
+department with a satisfaction rating of 95%.
+
+One NASA employee, John Smith, commented on the findings,
+stating, "I'm not surprised that NASA came out on top.
+It's a great place to work with amazing people and
+incredible opportunities. I'm proud to be a part of
+such an innovative organization."
+
+The results were also welcomed by NASA's management team,
+with Director Tom Johnson stating, "We are thrilled to
+hear that our employees are satisfied with their work at NASA.
+We have a talented and dedicated team who work tirelessly
+to achieve our goals, and it's fantastic to see that their
+hard work is paying off."
+
+The survey also revealed that the
+Social Security Administration had the lowest satisfaction
+rating, with only 45% of employees indicating they were
+satisfied with their job. The government has pledged to
+address the concerns raised by employees in the survey and
+work towards improving job satisfaction across all departments.
+'''
+```
+
+##### Model response. Making the model to infer the topic in a text
+
+```plain
+government survey, job satisfaction, NASA, Social Security Administration, employee concerns
 ```
