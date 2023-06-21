@@ -118,8 +118,8 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
         - [Model response. Asking if a text sentiment is positive or negative](#model-response-asking-if-a-text-sentiment-is-positive-or-negative)
       - [Identifying types of emotions in a text](#identifying-types-of-emotions-in-a-text)
         - [Model response. Identifying types of emotions in a text](#model-response-identifying-types-of-emotions-in-a-text)
-      - [Asking to identify anger in a text](#asking-to-identify-anger-in-a-text)
-        - [Model response. Asking to identify anger in a text](#model-response-asking-to-identify-anger-in-a-text)
+      - [Asking to identify a sentiment in a text](#asking-to-identify-a-sentiment-in-a-text)
+        - [Model response. Asking to identify a sentiment in a text](#model-response-asking-to-identify-a-sentiment-in-a-text)
       - [Requesting to extract specific details from a text](#requesting-to-extract-specific-details-from-a-text)
         - [Model response. Requesting to extract specific details from a text](#model-response-requesting-to-extract-specific-details-from-a-text)
       - [Asking the model to do multiple inferring tasks at the same time](#asking-the-model-to-do-multiple-inferring-tasks-at-the-same-time)
@@ -1152,6 +1152,8 @@ The product arrived a day earlier than expected.
 
 Large language models can perform various text analysis tasks, such as sentiment extraction, label extraction, and name extraction, without the need for separate models or extensive training and deployment processes, making application development faster and more efficient.
 
+In this class, we explore the concept of inferring with the help of large language models (LLMs). We delve into the capabilities of these models to analyze text, including tasks like extracting labels, names, and sentiment. Contrasting traditional machine learning workflows that involve separate models for each task, large language models demonstrate their speed and versatility by generating results based on prompts. We'll learn with various examples, such as sentiment analysis, emotion extraction, information extraction, topic inference, and zero-shot learning. The emphasis is on the efficiency and flexibility of using prompts to swiftly accomplish intricate natural language processing tasks.
+
 #### Requesting for the sentiment of a text
 
 ```plain
@@ -1205,7 +1207,7 @@ Needed a nice lamp for my bedroom, and this one had additional storage and not t
 happy, satisfied, grateful, impressed, content
 ```
 
-#### Asking to identify anger in a text
+#### Asking to identify a sentiment in a text
 
 ```plain
 Is the writer of the following review expressing anger? The review is delimited with triple backticks. Give your answer as either yes or no.
@@ -1216,7 +1218,7 @@ Needed a nice lamp for my bedroom, and this one had additional storage and not t
 '''
 ```
 
-##### Model response. Asking to identify anger in a text
+##### Model response. Asking to identify a sentiment in a text
 
 ```plain
 No
