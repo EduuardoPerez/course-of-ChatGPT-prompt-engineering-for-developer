@@ -126,6 +126,25 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
         - [Model response. Asking the model to do multiple inferring tasks at the same time](#model-response-asking-the-model-to-do-multiple-inferring-tasks-at-the-same-time)
       - [Making the model to infer the topic in a text](#making-the-model-to-infer-the-topic-in-a-text)
         - [Model response. Making the model to infer the topic in a text](#model-response-making-the-model-to-infer-the-topic-in-a-text)
+    - [Class 06: Transforming](#class-06-transforming)
+      - [Requesting a translation](#requesting-a-translation)
+        - [Model response. Requesting a translation](#model-response-requesting-a-translation)
+      - [Guessing the language of a text](#guessing-the-language-of-a-text)
+        - [Model response. Guessing the language of a text](#model-response-guessing-the-language-of-a-text)
+      - [Making multiple translations](#making-multiple-translations)
+        - [Model response. Making multiple translations](#model-response-making-multiple-translations)
+      - [Translating in multiple tones](#translating-in-multiple-tones)
+        - [Model response. Translating in multiple tones](#model-response-translating-in-multiple-tones)
+      - [Translate multiple languages to multiple other languages](#translate-multiple-languages-to-multiple-other-languages)
+        - [Model response. Translate multiple languages to multiple other languages](#model-response-translate-multiple-languages-to-multiple-other-languages)
+      - [Converting text from one tone to another tone](#converting-text-from-one-tone-to-another-tone)
+        - [Model response. Converting text from one tone to another tone](#model-response-converting-text-from-one-tone-to-another-tone)
+      - [Transform text from one format to another](#transform-text-from-one-format-to-another)
+        - [Model response. Transform text from one format to another](#model-response-transform-text-from-one-format-to-another)
+      - [Asking for proofread, correct and rewrite a text](#asking-for-proofread-correct-and-rewrite-a-text)
+        - [Model response. Asking for proofread, correct and rewrite a text](#model-response-asking-for-proofread-correct-and-rewrite-a-text)
+      - [Ask for a text to be revised, corrected and made more convincing with a specific output format](#ask-for-a-text-to-be-revised-corrected-and-made-more-convincing-with-a-specific-output-format)
+        - [Model response. Ask for a text to be revised, corrected and made more convincing with a specific output format](#model-response-ask-for-a-text-to-be-revised-corrected-and-made-more-convincing-with-a-specific-output-format)
 
 ## Personal notion documentation
 
@@ -1324,4 +1343,98 @@ work towards improving job satisfaction across all departments.
 
 ```plain
 government survey, job satisfaction, NASA, Social Security Administration, employee concerns
+```
+
+### Class 06: Transforming
+
+Large language models have the ability to transform text in various ways, such as translation, grammar correction, and format conversion. They can translate text from one language to another, identify the language of a given text, and even handle multiple translations simultaneously. The models can also transform the tone of text, converting slang to formal language, and vice versa. Additionally, they are proficient in converting between different formats like JSON to HTML. Another valuable application is spell and grammar checking, where the models can identify and correct errors in sentences. Users can utilize these capabilities to build tools like universal translators or proofreaders. The text transformation abilities of language models enable users to generate longer and more comprehensive responses based on shorter prompts.
+
+#### Requesting a translation
+
+```plain
+```
+
+##### Model response. Requesting a translation
+
+```plain
+```
+
+#### Guessing the language of a text
+
+```plain
+```
+
+##### Model response. Guessing the language of a text
+
+```plain
+```
+
+#### Making multiple translations
+
+```plain
+```
+
+##### Model response. Making multiple translations
+
+```plain
+```
+
+#### Translating in multiple tones
+
+```plain
+```
+
+##### Model response. Translating in multiple tones
+
+```plain
+```
+
+#### Translate multiple languages to multiple other languages
+
+```plain
+```
+
+##### Model response. Translate multiple languages to multiple other languages
+
+```plain
+```
+
+#### Converting text from one tone to another tone
+
+```plain
+```
+
+##### Model response. Converting text from one tone to another tone
+
+```plain
+```
+
+#### Transform text from one format to another
+
+```plain
+```
+
+##### Model response. Transform text from one format to another
+
+```plain
+```
+
+#### Asking for proofread, correct and rewrite a text
+
+```plain
+```
+
+##### Model response. Asking for proofread, correct and rewrite a text
+
+```plain
+```
+
+#### Ask for a text to be revised, corrected and made more convincing with a specific output format
+
+```plain
+```
+
+##### Model response. Ask for a text to be revised, corrected and made more convincing with a specific output format
+
+```plain
 ```

@@ -8,6 +8,7 @@ def execute():
     print("Welcome to class 06: Transforming")
     print("------------------------------")
 
+    # ** Requesting a translation
     prompt = """
     Translate the following English text to Spanish: \
     ```Hi, I would like to order a blender```
@@ -17,6 +18,7 @@ def execute():
     # response
     # Hola, me gustaría ordenar una licuadora.
 
+    # ** Guessing the language of a text
     prompt = """
     Tell me which language this is:
     ```Combien coûte le lampadaire?```
@@ -26,6 +28,7 @@ def execute():
     # response
     # This is French.
 
+    # ** Making multiple translations
     prompt = """
     Translate the following  text to French and Spanish
     and English pirate: \
@@ -38,6 +41,7 @@ def execute():
     # Spanish pirate: ```Quiero pedir una pelota de baloncesto```
     # English pirate: ```I want to order a basketball```
 
+    # ** Translating in multiple tones
     prompt = """
     Translate the following text to Spanish in both the \
     formal and informal forms:
@@ -49,6 +53,7 @@ def execute():
     # Formal: ¿Le gustaría ordenar una almohada?
     # Informal: ¿Te gustaría ordenar una almohada?
 
+    # ** Translate multiple languages to multiple other languages
     user_messages = [
         "La performance du système est plus lente que d'habitude.",  # System performance is slower than normal
         "Mi monitor tiene píxeles que no se iluminan.",  # My monitor has pixels that are not lighting
@@ -88,6 +93,7 @@ def execute():
     # English: My screen is flickering.
     # Korean: 내 화면이 깜빡입니다.
 
+    # ** Converting text from one tone to another tone
     prompt = """
     Translate the following from slang to a business letter:
     'Dude, This is Joe, check out this spec on this standing lamp.'
@@ -106,6 +112,7 @@ def execute():
     #
     # Joe
 
+    # ** Transform text from one format to another
     data_json = {
         "resturant employees": [
             {"name": "Shyam", "email": "shyamjaiswal@gmail.com"},
@@ -146,6 +153,7 @@ def execute():
     # </table>
     display(HTML(response))  # prints the html table in jupyter notebooks
 
+    # ** Asking for proofread, correct and rewrite a text
     text = [
         "The girl with the black and white puppies have a ball.",  # The girl has a ball.
         "Yolanda has her notebook.",  # ok
@@ -198,6 +206,7 @@ def execute():
     diff = Redlines(text, response)
     display(Markdown(diff.output_markdown))  # prints the text making marks on the changes done
 
+    # ** Ask for a text to be revised, corrected and made more convincing with a specific output format
     prompt = f"""
     proofread and correct this review. Make it more compelling.
     Ensure it follows APA style guide and targets an advanced reader.
