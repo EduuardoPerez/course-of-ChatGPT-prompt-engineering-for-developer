@@ -135,8 +135,8 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
         - [Model response. Making multiple translations](#model-response-making-multiple-translations)
       - [Translating in multiple tones](#translating-in-multiple-tones)
         - [Model response. Translating in multiple tones](#model-response-translating-in-multiple-tones)
-      - [Translate multiple languages to multiple other languages](#translate-multiple-languages-to-multiple-other-languages)
-        - [Model response. Translate multiple languages to multiple other languages](#model-response-translate-multiple-languages-to-multiple-other-languages)
+      - [Translate multiple languages to multiple other languages at the same time](#translate-multiple-languages-to-multiple-other-languages-at-the-same-time)
+        - [Model response. Translate multiple languages to multiple other languages at the same time](#model-response-translate-multiple-languages-to-multiple-other-languages-at-the-same-time)
       - [Converting text from one tone to another tone](#converting-text-from-one-tone-to-another-tone)
         - [Model response. Converting text from one tone to another tone](#model-response-converting-text-from-one-tone-to-another-tone)
       - [Transform text from one format to another](#transform-text-from-one-format-to-another)
@@ -1387,9 +1387,9 @@ Translate the following  text to French and Spanish and English pirate:
 ##### Model response. Making multiple translations
 
 ```plain
-French pirate: ```Je veux commander un ballon de basket```
-Spanish pirate: ```Quiero pedir una pelota de baloncesto```
-English pirate: ```I want to order a basketball```
+French: Je veux commander un ballon de basket
+Spanish: Quiero pedir una pelota de baloncesto
+English pirate: Arrr, I be wantin' to order a basketball!
 ```
 
 #### Translating in multiple tones
@@ -1406,7 +1406,7 @@ Formal: ¿Le gustaría ordenar una almohada?
 Informal: ¿Te gustaría ordenar una almohada?
 ```
 
-#### Translate multiple languages to multiple other languages
+#### Translate multiple languages to multiple other languages at the same time
 
 ```plain
 Tell me from which language each of the following sentences is from and translate them into English and Korean:
@@ -1417,7 +1417,7 @@ Tell me from which language each of the following sentences is from and translat
 5. 我的屏幕在闪烁
 ```
 
-##### Model response. Translate multiple languages to multiple other languages
+##### Model response. Translate multiple languages to multiple other languages at the same time
 
 ```plain
 1. The sentence "La performance du système est plus lente que d'habitude" is in French. It translates to "The system performance is slower than usual" in English and "시스템 성능이 평소보다 느립니다" in Korean.
@@ -1456,6 +1456,14 @@ Joe
 
 ```plain
 Translate the following JSON to an HTML table with column headers and title:
+
+data_json = {
+  "resturant employees": [
+    {"name": "Shyam", "email": "shyamjaiswal@gmail.com"},
+    {"name": "Bob", "email": "bob32@gmail.com"},
+    {"name": "Jai", "email": "jai87@gmail.com"}
+  ]
+}
 ```
 
 ##### Model response. Transform text from one format to another
