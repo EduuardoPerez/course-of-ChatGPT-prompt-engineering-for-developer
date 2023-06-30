@@ -148,11 +148,12 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
           - [Example 2. Model response. Asking for proofread, correct and rewrite a text](#example-2-model-response-asking-for-proofread-correct-and-rewrite-a-text)
       - [Ask for a text to be revised, corrected and made more convincing with a specific output format](#ask-for-a-text-to-be-revised-corrected-and-made-more-convincing-with-a-specific-output-format)
         - [Model response. Ask for a text to be revised, corrected and made more convincing with a specific output format](#model-response-ask-for-a-text-to-be-revised-corrected-and-made-more-convincing-with-a-specific-output-format)
-    - [Class 04: Expanding](#class-04-expanding)
+    - [Class 07: Expanding](#class-07-expanding)
       - [Asking the LLM to generate an email answer](#asking-the-llm-to-generate-an-email-answer)
       - [Model response. Asking the LLM to generate an email answer](#model-response-asking-the-llm-to-generate-an-email-answer)
       - [Asking the LLM to generate an email answer using details from the email](#asking-the-llm-to-generate-an-email-answer-using-details-from-the-email)
       - [Model response. Asking the LLM to generate an email answer using details from the email](#model-response-asking-the-llm-to-generate-an-email-answer-using-details-from-the-email)
+    - [Class 08: Chatbot](#class-08-chatbot)
 
 ## Personal notion documentation
 
@@ -1567,7 +1568,7 @@ Cons: One of the ears is a bit lower than the other, which makes the toy asymmet
 Conclusion: Overall, the panda plush toy is an excellent gift option for children and adults who love cute and cuddly toys. Despite its small size and asymmetrical design, the toy's softness and cuteness make up for its shortcomings. I highly recommend this product to anyone looking for a versatile and adorable gift option.
 ```
 
-### Class 04: Expanding
+### Class 07: Expanding
 
 Expanding is the task of taking a shorter piece of text, such as a set of instructions or a list of topics, and having the large language model generate a longer piece of text, such as an email or an essay about some topic. There are some great uses of this, such as if you use a large language model as a brainstorming partner. But I just also want to acknowledge that there's some problematic use cases of this, such as if someone were to use it, they generate a large amount of spam. So, when you use these capabilities of a large language model, please use it only in a responsible way, and in a way that helps people.
 
@@ -1649,3 +1650,23 @@ Thank you for choosing our brand, and we hope to have the opportunity to serve y
 Best regards,
 AI customer agent
 ```
+
+### Class 08: Chatbot
+
+One of the exciting things about a large language model is you could use it to build a custom chatbot with only a modest amount of effort. ChatGPT, the web interface, is a way for you to have a conversational interface, a conversation via a large language model. But one of the cool things is you can also use a large language model to build your custom chatbot to maybe play the role of an AI customer service agent or an AI order taker for a restaurant.
+
+In this class it’s described the components of the OpenAI chat completions format in more detail.
+
+![Kind of messages](classes/src/class08-chatbot-kind-of-messages.png)
+
+Chat models like ChatGPT process a series of messages and generate responses. The chat format is useful for both multi-turn conversations and single-turn tasks. The list of messages, including system messages and user/assistant exchanges, creates a conversations. The system message guides the assistant's behavior, while the user messages drive the conversation. The system message acts as an instruction and allows developers to shape the conversation without making it explicit to the user.
+
+The benefit of the system message is that it provides you, the developer, with a way to kind of frame the conversation without making the request itself part of the conversation. So you can kind of guide the assistant and kind of whisper in its ear and guide its responses without making the user aware.
+
+![Context to chat](classes/src/class08-context.png)
+
+In this class we built a chatbot called "OrderBot" for a pizza restaurant. A helper function collects user prompts and assistant responses, avoiding manual input. The collected prompts are stored in a list called "context," which grows as more messages are added. This allows the model to have the necessary information for determining its next actions. An interface is set up to display the OrderBot, and the context includes a system message with the menu. The same context is used for every language model call, gradually building up over time.
+
+For the example of the class it's used something like:
+
+![Instructions to orderbot](classes/src/class08-system-message.png)
