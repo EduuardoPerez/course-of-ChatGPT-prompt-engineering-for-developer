@@ -154,6 +154,7 @@ ChatGPT Prompt Engineering for Developers is beginner-friendly. Only a basic und
       - [Asking the LLM to generate an email answer using details from the email](#asking-the-llm-to-generate-an-email-answer-using-details-from-the-email)
       - [Model response. Asking the LLM to generate an email answer using details from the email](#model-response-asking-the-llm-to-generate-an-email-answer-using-details-from-the-email)
     - [Class 08: Chatbot](#class-08-chatbot)
+    - [Class 09: Conclusion](#class-09-conclusion)
 
 ## Personal notion documentation
 
@@ -1670,3 +1671,9 @@ In this class we built a chatbot called "OrderBot" for a pizza restaurant. A hel
 For the example of the class it's used something like:
 
 ![Instructions to orderbot](classes/src/class08-system-message.png)
+
+### Class 09: Conclusion
+
+![Course summary](classes/src/class09-summary.png)
+
+In the short course we learned about clear instructions and giving the model time to think when prompting. Iterative prompt development and the capabilities of large language models were covered, including summarizing, inferring, transforming, and expanding. We also built a custom chatbot. The course encourages us to come up with our own applications, big or small, and use the models responsibly for positive impact. Building applications with large language models is an exciting field, and we're encouraged to share our knowledge and inspire others to take the course.
