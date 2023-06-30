@@ -123,7 +123,7 @@ def execute():
         pn.panel(interactive_conversation, loading_indicator=True, height=300),
     )
 
-    dashboard
+    dashboard  # checck the example of the conversation in the images on the Notion notes
 
     messages = context.copy()
     messages.append(
@@ -141,6 +141,24 @@ def execute():
 
     response = get_completion_from_messages(messages, temperature=0)
     print(response)
+    # response, from the inputs given in the example of the Notion notes
+    # {
+    #     "pizza": {
+    #         "type": "Pepperoni",
+    #         "size": "Large",
+    #         "price": 12.95
+    #     },
+    #     "toppings": [],
+    #     "drinks": [
+    #         {
+    #             "type": "Coke",
+    #             "size": "Medium",
+    #             "price": 2.00,
+    #         }
+    #     ],
+    #     "sides": [],
+    #     "total_price": 14.95,
+    # }
 
 
 if __name__ == "__main__":
